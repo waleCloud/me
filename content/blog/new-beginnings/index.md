@@ -6,7 +6,7 @@ description: Friday 3pm EST 20th of August 2021 was the last moment I stopped be
 
 Friday 3pm EST 20th of August 2021 was the last moment I stopped being a <a href=https://namely.com target=_blank>Namely</a> employee after 1.8 years at the company.
 
-> While living, we have the change to live several lives as long as we're willing to.  - Paraphrasing off the netflix series `Money Heist`, a statement made by the character Tokyo. 
+> While living, we have the chance to live several lives as long as we're willing to.  - Paraphrasing off the netflix series `Money Heist`, a statement made by the character Tokyo.
 
 ## Birthing a new timeline into wale-cinematic universe.
 
@@ -24,6 +24,6 @@ This however was a necessary step for me as I believe working shouldn't be far-f
 > I am taking a Sabbatical for a Year. <br />
 > Not taking any new roles at the moment till the end of the 2022, however, I will be open to consulting opportunities from next year.
 
-To make this post short, I will write about how we built the `Report Builder` and make grounds works for the now `Intelligence` App at <a href=https://namely.com target=_blank>Namely</a>.
+To make this post short, I will write about how we built the `Report Builder` and made ground works for the now `Intelligence` App at <a href=https://namely.com target=_blank>Namely</a>.
 
 You can reach me on Twitter <a href=https://twitter.com/walecloud target=_blank>Walecloud</a>
