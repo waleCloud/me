@@ -1,14 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Walecloud.me`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Wale Ayandiran`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Perosnal blog documenting his work and parts of my life journey.`,
+    siteUrl: `https://walecloud.me`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `walecloud`,
+      devto: `walecloud`,
+      medium: `walecloud`,
+      stackoverflow: `walecloud`,
+      github: `walecloud`,
     },
   },
   plugins: [
@@ -27,6 +30,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/images`,
+        }
+      }
+    },  
     {
       resolve: `gatsby-transformer-remark`,
       options: {
