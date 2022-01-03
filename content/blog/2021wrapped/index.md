@@ -6,12 +6,13 @@ featuredImage: ../img/2021wrapped.jpg
 
 ---
 TL;DR
-> 2021, the year that kept giving. A lot of things happened this year for sure, some wins and some lessons disguised as Ls (Loses). Summary about the summary, I left my full-time role, Moved cities, Signed up with a Professional Career Coach, Did Quality work, Put smiles on peoples faces, Made some new friends in Q4.
+> 2021, the year that kept giving. A lot of things happened this year for sure; some wins and some lessons disguised as Ls (Loses). Summary about the summary; I left my full-time role, Moved cities, Signed up with a Professional Career Coach, Did Quality work, Put smiles on peoples faces, Made some new friends in Q4.
+
 
 ## How it Started
 
 ---
-2020 ended with me having to battle for my sanity from life challenges. looking back, one of the cause was me wanting to feel loved as it seemed I was missing out. This used to be hard to admit coming from someone who is supposedly content.
+2020 ended with me having to battle for my sanity from life challenges. Looking back, one of the cause was me wanting to feel loved as it seemed I was missing out. This used to be hard to admit coming from someone who is supposedly content.
 
 2021 started with me to the world <https://medium.com/@walecloud/hope-by-doing-7d6eb371d61a>
 The next day, well I forced myself for a run after a set-back on my peace of mind.
@@ -55,13 +56,13 @@ Travelling and living like a nomad was one of those things I wanted to do,
 
 ### What I have been upto
 
-My biggest achievement would be me seeing my girls (sisters) growing in school and outside of school. About school, I played around and decided to do a graduate course in Artificail Intelligence, (somebody please save me 😅) well it has been sweet as I’ve being playing more football than studying. fortunately, my grades so far suggests otherwise with As in the bag. Hoping to play more football and get more As in my study 😅
+My biggest achievement would be me seeing my girls (sisters) growing in school and outside of school. About school, I played around and decided to do a graduate course in Artificial Intelligence, (somebody please save me 😅) well it has been sweet as I’ve being playing more football than studying. fortunately, my grades so far suggests otherwise with A's in the bag. Hoping to play more football and get more A's in my study 😅
 
 Below screen shots is one of the highlights of the year was when former colleagues reached out to share their wins with me and how our paths together helped foster that;
 
 ![Team Balder](../img/balder.jpg)
 
-![Germany](../img/happ2.jpg)
+![Germany 1](../img/happy2.jpg)
 
 ![Germany too](../img/happy1.jpg)
 
@@ -77,11 +78,9 @@ My birthday was `Dec 7` I got some pretty interesting gifts to celebrate it.
 
 ![Mug](../img/hm.jpg)
 
+## What Next 2022?
 
-# What Next 2022?
-
-
-Getting the best of the year same way I go into every year. 🥂
+Getting the best of the year same way I go into every year while Living a Life of Impact. 🥂
 
 ![Me](../img/2022.jpeg)
 
