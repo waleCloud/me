@@ -1,6 +1,7 @@
 ---
 title: New Beginnings
 date: "2021-08-20T15:00:00.169Z"
+featuredImage: ../img/newbegin.jpg
 description: Friday 3pm EST 20th of August 2021 was the last moment I stopped being a <a href=https://namely.com target=_blank>Namely</a> employee after 1.8 years at the company.
 ---
 
@@ -27,3 +28,5 @@ This however was a necessary step for me as I believe working shouldn't be far-f
 To make this post short, I will write about how we built the `Report Builder` and made ground works for the now `Intelligence` App at <a href=https://namely.com target=_blank>Namely</a>.
 
 You can reach me on Twitter <a href=https://twitter.com/walecloud target=_blank>Walecloud</a>
+
+Featured Photo by <a href="https://unsplash.com/@jontyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jon Tyson</a> on <a href="https://unsplash.com/s/photos/new-beginnings?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

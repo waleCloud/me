@@ -85,3 +85,5 @@ Getting the best of the year same way I go into every year while Living a Life o
 ![Me](../img/2022.jpeg)
 
 Thank you for reading 😊, you can reach me on Twitter @walelcoud.
+
+Featured Photo by <a href="https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">engin akyurt</a> on <a href="https://unsplash.com/s/photos/2021-wrapped?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
