@@ -45,7 +45,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 730,
+              path: `${__dirname}/content/blog/img`,
             },
           },
           {
