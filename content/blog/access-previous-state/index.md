@@ -1,11 +1,11 @@
 ---
-title: Using React useRef Hooks to access immediate past props or state.
+title: Using React useRef Hook to access immediate past props or state.
 date: "2022-02-06T19:00:00.169Z"
 description: Accessing previous value of props or State with useRef hook in React.
 featuredImage: ./img/reacthook-img.jpeg
 ---
 
-## Using React useRef Hooks to access immediate past props or state
+## Using React useRef Hook to access immediate past props or state
 
 Do you want to know what the previous state of a value is before it got updated in React?
 You can easily leverage useRef to track the previous value of state or props in React.
@@ -51,7 +51,7 @@ First, we create an instance of `Ref` whenever the hook is called.
 The `useEffect` only runs when the `value` parameter changes and then assign that to the ref's `.current` property
 Finally, we return the `ref.current`.
 
-The first time the hook is called, ref.current will be `undefined` until a state or props value changes untl then before the useEffect hook is executed to reflext the latest previous value of the parameter.
+The first time the hook is called, ref.current will be `undefined` until a state or props value changes untl then before the useEffect hook is executed to reflect the latest previous value of the parameter.
 
 ---------------
 
