@@ -1,7 +1,7 @@
 ---
 title: Using React useRef Hooks to access immediate past props or state.
 date: "2022-02-06T19:00:00.169Z"
-description: Accessing previous value of props or State with useRef hook in Reac.
+description: Accessing previous value of props or State with useRef hook in React.
 featuredImage: ./img/reacthook-img.jpeg
 ---
 
