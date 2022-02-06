@@ -2,7 +2,7 @@
 title: 2021Wrapped
 date: "2022-01-02T15:00:00.169Z"
 description: No pressure.
-featuredImage: ../img/2021wrapped.jpg
+featuredImage: ./img/2021wrapped.jpg
 
 ---
 TL;DR
@@ -60,11 +60,11 @@ My biggest achievement would be me seeing my girls (sisters) growing in school a
 
 Below screen shots is one of the highlights of the year was when former colleagues reached out to share their wins with me and how our paths together helped foster that;
 
-![Team Balder](../img/balder.jpg)
+![Team Balder](./img/balder.jpg)
 
-![Germany 1](../img/happy2.jpg)
+![Germany 1](./img/happy2.jpg)
 
-![Germany too](../img/happy1.jpg)
+![Germany too](./img/happy1.jpg)
 
 ## Appreciations
 
@@ -72,17 +72,17 @@ Thankful to quality friends, I love you guys.
 
 My birthday was `Dec 7` I got some pretty interesting gifts to celebrate it.
 
-![Mug](../img/mug.jpg)
+![Mug](./img/mug.jpg)
 
-![Mug](../img/px.jpg)
+![Mug](./img/px.jpg)
 
-![Mug](../img/hm.jpg)
+![Mug](./img/hm.jpg)
 
 ## What Next 2022?
 
 Getting the best of the year same way I go into every year while Living a Life of Impact. 🥂
 
-![Me](../img/2022.jpeg)
+![Me](./img/2022.jpeg)
 
 Thank you for reading 😊, you can reach me on Twitter @walelcoud.
 
