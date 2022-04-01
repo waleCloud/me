@@ -6,13 +6,15 @@ import  Github from "../images/github-icon.svg";
 import  Medium from "../images/medium-icon.svg";
 import  Stackoverflow from "../images/stackoverflow-icon.svg";
 import  Linkedln from "../images/linkedln-icon.svg";
+import  Academia from "../images/academia-icon.svg";
+import AnchorLink from './AnchorLink';
 
 export const Socials = ({ social }) => {
 
   return (
     <p>
       <br />
-        <a href={`https://twitter.com/${social?.twitter || ``}`}>
+        <AnchorLink url={`https://twitter.com/${social?.twitter || ``}`}>
           <Twitter
             className="bio-avatar"
             layout="constrained"
@@ -22,9 +24,9 @@ export const Socials = ({ social }) => {
             quality={95}
             alt="Twitter"
           />
-        </a>
+        </AnchorLink>
         {' '}{' '}
-        <a href={`https://dev.to/${social?.twitter || ``}`}>
+        <AnchorLink url={`https://dev.to/${social?.twitter || ``}`}>
           <DevTo
             className="bio-avatar"
             layout="constrained"
@@ -34,9 +36,9 @@ export const Socials = ({ social }) => {
             quality={95}
             alt="Dev.to"
           />
-        </a>
+        </AnchorLink>
         {' '}
-        <a href={`https://github.com/${social?.twitter || ``}`}>
+        <AnchorLink url={`https://github.com/${social?.twitter || ``}`}>
           <Github
             className="bio-avatar"
             layout="constrained"
@@ -46,9 +48,9 @@ export const Socials = ({ social }) => {
             quality={95}
             alt="Github"
           />
-        </a>
+        </AnchorLink>
         {' '}
-        <a href={`https://medium.com/@${social?.twitter || ``}`}>
+        <AnchorLink url={`https://medium.com/@${social?.twitter || ``}`}>
           <Medium
             className="bio-avatar"
             layout="constrained"
@@ -58,9 +60,9 @@ export const Socials = ({ social }) => {
             quality={95}
             alt="Medium"
           />
-        </a>
+        </AnchorLink>
         {' '}
-        <a href={`https://stackoverflow.com/${social?.twitter || ``}`}>
+        <AnchorLink url={`https://stackoverflow.com/${social?.twitter || ``}`}>
           <Stackoverflow
             className="bio-avatar"
             layout="constrained"
@@ -70,9 +72,21 @@ export const Socials = ({ social }) => {
             quality={95}
             alt="Stackoverflow"
           />
-        </a>
+        </AnchorLink>
         {' '}
-        <a href='https://www.linkedin.com/in/wale-ayandiran-31717891'>
+        <AnchorLink url='https://independent.academia.edu/waleayandirran/'>
+          <Academia
+            className="bio-avatar"
+            layout="constrained"
+            formats={["AUTO", "WEBP", "AVIF"]}
+            width={30}
+            height={30}
+            quality={95}
+            alt="Academia.edu"
+          />
+        </AnchorLink>
+        {' '}
+        <AnchorLink url='https://www.linkedin.com/in/wale-ayandiran-31717891'>
           <Linkedln
             className="bio-avatar"
             layout="constrained"
@@ -82,7 +96,7 @@ export const Socials = ({ social }) => {
             quality={95}
             alt="Linkedln"
           />
-        </a>
+        </AnchorLink>
     </p>
   )
 }
