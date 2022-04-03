@@ -2,7 +2,7 @@
   "name": "walecloud",
   "private": true,
   "engines": {
-    "node": "12.x || 14.x"
+    "node": "14.x"
   },
   "description": "Walecloud",
   "version": "1.0.0",

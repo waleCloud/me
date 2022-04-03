@@ -1,15 +1,16 @@
 ---
 title: Scaling Frontend Applications - Coding Guidelines
-date: "2022-02-20T15:00:00.169Z"
+date: "2022-04-03T15:00:00.169Z"
 featuredImage: ./img/building.png
 description: Structuring your frontend application can become tricky as your product and codebase grows, In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size.
 ---
 
-Structuring your frontend application can become tricky as your product and codebase grows, In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size. This guideline is strongly inspired by a pattern termed as the [duck pattern](https://www.freecodecamp.org/news/scaling-your-redux-app-with-ducks-6115955638be).
+Structuring your frontend application can become tricky as your product and codebase grows. In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size. This guideline is strongly inspired by a pattern termed as the <a href="https://www.freecodecamp.org/news/scaling-your-redux-app-with-ducks-6115955638be" target="_blank">duck pattern</a>.
 
 The entire idea of ducks is to group seemingly related files together in a way that makes it modular, modification easier, scalable, and easy to deconstruct whenever a need arises and move technologies around like state libraries etc.
 
-The saying if it walks like a duck, quack like a duck, its probably a duck. Duck pattern at its core is about colocating small files that work together as a unit. Lets see guideline  below;
+Ducks are extroverted, gregarious animals who feel most at minimal fuss when they're in groups.
+Duck pattern at its core is about colocating small files that work together as a unit to make working with them a breeze. Lets see guideline below;
 
 * [Files and Folder Convention](#file-and-folder-convention)
 * [Components](#components)
@@ -19,7 +20,7 @@ The saying if it walks like a duck, quack like a duck, its probably a duck. Duck
 * [Interacting with Backend](#interacting-with-backend)
 * [State sharing](#state-sharing)
 
-### File and Folder Convention
+### <a name="file-and-folder-convention"></a>File and Folder Convention
 
 Using the feature pattern to colocate feature related files rather than by functions, lets take a look at a login example
 
@@ -38,7 +39,7 @@ Login/
 
 Because each new feature comes with its own folder, this technique scales considerably better.
 
-You can have files that aren't associated with any functionality and call them common/shared/core etc because you want to reuse code across several functionalities in your product.
+You can have files that aren't associated with any functionality and call them common/shared/core e.t.c. because you want to reuse code across several functionalities in your product.
 
 ___
 
@@ -80,16 +81,16 @@ src/
   utils/ ---> JS files that are globally needed, helper functions, etc.
 ```
 
-### Components
+### <a name="components"></a>Components
 
-Your Frontend Components will most likely be group into 2 kinds, presentational and connected components.
+Your Frontend Components will most likely be grouped into 2 kinds, presentational and connected components.
 
 #### Worthy to Remember
 
-* Endeavor to use functional components all through because why not?
-* Try making sure all components be named exported and have their own folder.
+* Endeavor to use functional components all through because, why not 🤷🏾? it saves you from dealing with class components and its numerous lifecycle methods.
+* Have an index file that exports all components from a feature folder, helps to organize your imports and exports.
 
-### Presentational Components
+### <a name="presentational-components"></a> Presentational Components
 
 * Have no dependencies on the rest of the application.
 * Values and callbacks are passed into these via props.
@@ -110,7 +111,7 @@ export const PresentationComponent = ({ prop1, props2 ...propN }) => (
 );
 ```
 
-### Connected Components
+### <a name="connected-components"></a>Connected Components
 
 * are responsible for retrieving data.
 * are aware of the store and be connected to it.
@@ -131,7 +132,7 @@ ComponentName/
   utils.js ---> Optional when you need to move some functions out of the component file to keep things clean.
 ```
 
-### Styling Components
+### <a name="styling-components"></a> Styling Components
 
 Because I've been a making a case for using styled components, we will like to keep these clean and away from jsx logic. All created styled components will be inside an Styles.js file inside the component folder.
 
@@ -162,11 +163,11 @@ export const LeftMenu = styled("div")`
 `;
 ```
 
-### Interacting with Backend
+### <a name="interacting-with-backend"></a> Interacting with Backend
 
 All backend related actions should be in the `actions` folder within each components directory. see [Connected Components](#connected-components) above.
 
-### State sharing
+### <a name="state-sharing"></a> State sharing
 
 There's a couple of options for this and I see most teams now are leaning towards React Context for React applications,
 other worthy mentions include:
@@ -181,9 +182,9 @@ Actions/
 
 ---
 
-This writeup is highly opinionated on my experience but a lot of teams` small and large have similar approach to handling their frontend applications.
+This writeup is highly opinionated on my experience but a lot of teams both small and large have similar approach to handling their frontend applications.
 
-Let me know if you find this useful or have questions or share how you've been able to structure your frontend application at work.
+Let me know if you find this useful or have questions or share how you've been able to structure your frontend applications at work.
 
 Photo by <a href="https://unsplash.com/@heysupersimi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simone Hutsch</a> on <a href="https://unsplash.com/s/photos/folder-structure?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
