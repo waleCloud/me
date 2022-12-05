@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Wale Ayandiran" />
+      <Seo title="Wale Ayandiran" meta="Wale Ayandiran, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, Tech Lead, Engineering Leadership" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
