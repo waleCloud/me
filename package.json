@@ -11,6 +11,7 @@
     "url": "https://github.com/walecloud/me/issues"
   },
   "dependencies": {
+    "@proteus-ai/sdk": "",
     "false": "^0.0.4",
     "gatsby": "^3.13.0",
     "gatsby-image": "3.11.0",
