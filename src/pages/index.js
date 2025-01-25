@@ -27,6 +27,12 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Wale Ayandiran" meta="Wale Ayandiran, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, Tech Lead, Engineering Leadership" />
       <Bio />
+      {/* <section>
+        <ul style={{ listStyle: `none` }}>
+          <li><Link to="/papers">Papers</Link></li>
+          <li><Link to="/startup-stories">Startup stories</Link></li>
+        </ul>
+      </section> */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

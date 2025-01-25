@@ -52,7 +52,7 @@ const Bio = () => {
           Personal blog by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <br />
-          Sharing his experiences on life & software engineering
+          One experience at a time
           <br />
           {<Socials social={social} />}
         </p>

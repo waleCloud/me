@@ -1,5 +1,5 @@
 ---
-title: New Beginnings
+title: New beginnings - MSc Artificial intelligence
 date: "2021-08-20T15:00:00.169Z"
 featuredImage: ./img/newbegin.jpg
 description: Friday 3pm EST 20th of August 2021 was the last moment I stopped being a <a href=https://namely.com target=_blank>Namely</a> employee after 1.8 years at the company.
