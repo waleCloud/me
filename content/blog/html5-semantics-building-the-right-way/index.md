@@ -5,6 +5,8 @@ featuredImage: ./img/image.png
 description: Hello there! I hope you were able to get your feet wet with previous posts on web development front-end.
 ---
 
+***First published on [justcodenow](https://medium.com/justcodenow/building-the-right-way-html5-semantics-7190bdb269c4)***
+
 Hello there!
 
 I hope you were able to get your feet wet with previous posts on web development front-end.
