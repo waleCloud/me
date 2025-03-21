@@ -9,6 +9,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Socials } from "./Socials"
+import Menu from "./menu"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -49,13 +50,14 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Personal blog by <strong>{author.name}</strong> {author?.summary || null}
+          Welcome to <strong>{author.name}'s</strong> Blog
           {` `}
           <br />
-          One experience at a time
+          I'm Wale Ayandiran, a software engineer and tech entrepreneur.
           <br />
           {<Socials social={social} />}
-        </p>
+          <Menu />
+          </p>
       )}
     </div>
   )

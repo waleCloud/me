@@ -96,6 +96,8 @@ export const pageQuery = graphql`
           }
         }
         description
+        category
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
