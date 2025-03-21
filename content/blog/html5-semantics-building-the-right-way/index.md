@@ -3,6 +3,8 @@ title: Building the right way — Html5 Semantics
 date: "2017-09-19T15:00:00.169Z"
 featuredImage: ./img/image.png
 description: Hello there! I hope you were able to get your feet wet with previous posts on web development front-end.
+category: ["Tech", "accessibility"]
+
 ---
 
 ***First published on [justcodenow](https://medium.com/justcodenow/building-the-right-way-html5-semantics-7190bdb269c4)***

@@ -3,7 +3,7 @@ title: "Big Data Analytics: Better Decision Making"
 date: "2015-11-06"
 description: The term Big Data is used almost anywhere these days; from news articles to professional magazines, from tweets to YouTube videos and blog discussions.
 tags: ["Big Data", "Analytics", "Decision Making"]
-category: ["academia-papers"]
+category: ["Academia-papers"]
 publication: "Nigeria - Devintas Conference - LAUTECH - Ogbomosho"
 featuredImage: ./img/big-data.jpg
 

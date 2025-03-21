@@ -2,6 +2,7 @@
 title: 2021Wrapped
 date: "2022-01-02T15:00:00.169Z"
 description: No pressure.
+category: ["Life"]
 featuredImage: ./img/2021wrapped.jpg
 
 ---
