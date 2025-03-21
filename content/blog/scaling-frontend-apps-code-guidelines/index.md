@@ -3,6 +3,8 @@ title: Scaling Frontend Applications - Coding Guidelines
 date: "2022-04-03T15:00:00.169Z"
 featuredImage: ./img/building.png
 description: Structuring your frontend application can become tricky as your product and codebase grows, In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size.
+category: ["Tech"]
+
 ---
 
 Structuring your frontend application can become tricky as your product and codebase grows. In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size. This guideline is strongly inspired by a pattern termed as the <a href="https://www.freecodecamp.org/news/scaling-your-redux-app-with-ducks-6115955638be" target="_blank">duck pattern</a>.

@@ -1,14 +1,22 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import PostCard from "../components/PostCard"
 import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+    // Extract unique categories from posts
+    const categories = Array.from(
+      new Set(
+        posts.flatMap(post => post.frontmatter.category)
+      )
+    )
+  
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -25,42 +33,26 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Wale Ayandiran" meta="Wale Ayandiran, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, Tech Lead, Engineering Leadership" />
-      <Bio />
-      {/* <section>
-        <ul style={{ listStyle: `none` }}>
-          <li><Link to="/papers">Papers</Link></li>
-          <li><Link to="/startup-stories">Startup stories</Link></li>
-        </ul>
-      </section> */}
+      <Seo title="Wale Ayandiran"
+      meta="Wale Ayandiran, Founder, Tech founder, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, Tech Lead, Engineering Leadership" />
+      <Bio categories={categories} />
+
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const category = post?.frontmatter?.category
 
+          const slug = `${category ? category[0] : "blog"}${post.fields.slug}`
+          
           return (
             <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
+              <PostCard
+                key={title}
+                title={title}
+                date={post.frontmatter.date}
+                excerpt={post.frontmatter.description || post.excerpt}
+                slug={slug}
+              />
             </li>
           )
         })}
@@ -88,7 +80,10 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          category
+          tags
         }
+        excerpt
       }
     }
   }

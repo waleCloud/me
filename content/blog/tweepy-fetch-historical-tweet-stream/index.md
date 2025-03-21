@@ -3,6 +3,7 @@ title: Twitter historic data scrapping with tweepy.
 date: "2022-11-03T15:00:00.169Z"
 description: Getting tweets and tweets data (dates, like_count, retweets) etc from Twitter is easy as logging into the micro-blogging platform and taking any tweet you want from any publicly available account. This makes sense if one is only interested in a tweet or at most less than 10 tweets from a single account. it becomes a hassle when you need to fetch tweets from multiple users or a significant number of tweets.
 featuredImage: ./img/history.webp
+category: ["Machine-Learning"]
 ---
 
 ## Twitter historic data scrapping with tweepy.

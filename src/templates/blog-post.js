@@ -6,11 +6,13 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data, location }) => {  
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
+  const prevSlug = previous?.frontmatter.category && previous.frontmatter.category[0] + previous.fields.slug
+  const nextSlug = next?.frontmatter.category && next.frontmatter.category[0] + next.fields.slug
+  
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
   return (
@@ -50,14 +52,14 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`/${prevSlug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`/${nextSlug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -96,6 +98,8 @@ export const pageQuery = graphql`
           }
         }
         description
+        category
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -104,6 +108,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        category
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -112,6 +117,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        category
       }
     }
   }
