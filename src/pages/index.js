@@ -10,6 +10,13 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+    // Extract unique categories from posts
+    const categories = Array.from(
+      new Set(
+        posts.flatMap(post => post.frontmatter.category)
+      )
+    )
+  
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -28,7 +35,8 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Wale Ayandiran"
       meta="Wale Ayandiran, Founder, Tech founder, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, Tech Lead, Engineering Leadership" />
-      <Bio />
+      <Bio categories={categories} />
+
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -37,17 +45,15 @@ const BlogIndex = ({ data, location }) => {
           const slug = `${category ? category[0] : "blog"}${post.fields.slug}`
           
           return (
-            <>
-        <PostCard
-          key={post.title}
-          title={title}
-          date={post.date}
-          excerpt={post.description || post.excerpt}
-          slug={slug}
-          type={post.type}
-        />
-            
-            </>
+            <li key={post.fields.slug}>
+              <PostCard
+                key={title}
+                title={title}
+                date={post.frontmatter.date}
+                excerpt={post.frontmatter.description || post.excerpt}
+                slug={slug}
+              />
+            </li>
           )
         })}
       </ol>

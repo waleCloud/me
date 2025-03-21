@@ -6,9 +6,9 @@ import Bio from "../components/bio"
 
 const CategoryTemplate = ({ pageContext, location }) => {  
   const { category, posts } = pageContext
-
+  
   return (
-    <Layout location={location}>
+    <Layout location={location} title={`Walecloud.me`}>
       <Seo 
         title={`Posts in ${category}`}
         meta={`"Wale Ayandiran, Founder, Tech founder, ${category}"`}

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const PostCard = ({ title, date, excerpt, slug, type }) => (
+const PostCard = ({ title, date, excerpt, slug }) => (
   <article
-    className="post-card post-list-item"
+    className="post-list-item"
     itemScope
     itemType="http://schema.org/Article"
   >

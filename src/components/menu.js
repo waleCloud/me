@@ -1,13 +1,15 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-const Menu = () => {
+const Menu = ({ categories }) => {
   return (
     <section>
       <ul style={{ listStyle: `none` }}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/academia-papers">Academia Papers</Link></li>
-        <li><Link to="/startup-stories">Startup Adventures</Link></li>
+        {categories.map(category => (
+          <li key={category}>
+            <Link to={`/${category.toLowerCase()}/`}>{category}</Link>
+          </li>
+        ))}
       </ul>
   </section>
   )
