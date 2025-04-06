@@ -83,7 +83,11 @@ Poor planning meetings are wish-fulfillment exercises: "Let's pull in all these 
 
 The Transformation: Turn sprint planning into investments decisions.
 
-    Effective planning meetings are like investment decisions – consciously allocating limited resources (developer time) to generate maximum value. They acknowledge uncertainty and build in contingency. 
+    Effective planning meetings are like investment decisions – 
+    consciously allocating limited resources (developer time) to generate maximum value.
+    
+    They acknowledge uncertainty and build in contingency.
+
     For example: "These three items are must-haves. These next two are stretch goals if things go smoothly."
 
 
