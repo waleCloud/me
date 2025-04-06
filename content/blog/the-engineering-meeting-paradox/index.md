@@ -33,7 +33,13 @@ This meeting is like a group text where everyone must read their message aloud. 
 
 The Transformation:
 
-    Turn the stand-up into a pit stop. In a Formula One race, pit crews don’t narrate their wrench-turning; they strategize, adapt, and solve immediate problems. A stand-up should be a 15-minute tactical huddle: “We’re stuck on the payment gateway integration, who can pair with Dev A this morning?” Time saved: 80 hours/year per team.
+    Turn the stand-up into a pit stop. 
+    
+    In a Formula One race, pit crews don’t narrate their wrench-turning; they strategize, adapt, and solve immediate problems.
+    
+    A stand-up should be a 15-minute tactical huddle: “We’re stuck on the payment gateway integration, who can pair with Dev A this morning?” 
+    
+    Time saved: 80 hours/year per team.
 
 ### 2. The Decision-less Discussion
 
@@ -83,9 +89,9 @@ The Transformation: Turn sprint planning into investments decisions.
 
 ## Engineering leadership playbook
 
-Here's my two penny how engineering leaders should handle meetings: The challenge isn't eliminating meetings – it's curating which ones deserve to exist and how they should function.
+Here's my two penny on how engineering leaders should handle meetings: The challenge isn't eliminating meetings – it's curating which ones deserve to exist and how they should function.
 
-***Think of meetings like code:***
+***Put meetings in the same bracket as code:***
 
     Refactor mercilessly. If a meeting isn’t yielding value, delete it.
 
@@ -101,4 +107,4 @@ Perhaps we need a new metric in engineering: the Meeting-to-Value ratio. How man
 
 The next time you schedule a meeting, ask yourself: Is this synchronous time creating value that couldn't be created asynchronously? If not, maybe it really should have been an email after all.
 
-Your turn: Audit one meeting this week. Ask: “Did this create momentum or malaise?” If it’s the latter, nuke it. 🔥
+**Your turn:** `Audit one meeting this week. Ask: “Did this create momentum or malaise?” If it’s the latter, nuke it. 🔥`
