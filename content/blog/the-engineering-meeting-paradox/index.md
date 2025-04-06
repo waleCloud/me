@@ -1,17 +1,17 @@
 ---
-title: 
+title: The engineering meeting paradox
 date: "2025-04-04T00:00:00.000Z"
-description: What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is: meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage—overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
+description: What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is: meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage, overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
 category: ["Tech"]
-featuredImage: ./img/
+featuredImage: ./img/The engineering meeting paradox.png
 
 ---
 
-What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is: meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage—overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
+What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is: meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage, overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
 
 ## When "Just Send an Email" Isn't Enough: Navigating Meeting Culture in Engineering
 
-Ever notice how we engineers can spend hours optimizing database queries to save milliseconds but then sit through hour-long meetings where the only decision made is to **schedule another meeting?** The irony isn't lost on us. In a world where ***"this meeting could have been an email"*** has become a battle cry, we often miss the nuanced reality of when meetings actually create value versus when they're just ceremonial time sinks.
+Ever notice how we engineers can spend hours optimizing database queries to save milliseconds but then sit through hour-long meetings where the only decision made is to **schedule another meeting?** The irony isn't lost on us 😀. In a world where ***"this meeting could have been an email"*** has become a battle cry, we often miss the nuanced reality of when meetings actually create value versus when they're just ceremonial time sinks.
 
 ## The Meeting Spectrum: Time Vampires vs. Decision Accelerators
 
