@@ -19,7 +19,6 @@ const Layout = ({ location, title, children }) => {
       </Link>
     )
   }
-
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>

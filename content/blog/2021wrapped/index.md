@@ -2,6 +2,7 @@
 title: 2021Wrapped
 date: "2022-01-02T15:00:00.169Z"
 description: No pressure.
+category: ["Life"]
 featuredImage: ./img/2021wrapped.jpg
 
 ---
@@ -30,7 +31,7 @@ Q1 was a busy period for me, worked my socks off at Namely to see the Report bui
 ##### - Yutars
 
 Talking about work and career, 2021 was both High and Low for my colleagues and I at <https://yutars.com>. We had over 7 Lenders using our platform at a time and running their FGN Negative investigation through us,
-The triggered the birth of Blacklist to help with fraud prevention and reporting as we couldn’t get direct integration to these Lending companies due to according to them, “Licence”.
+That triggered the birth of Blacklist to help with fraud prevention and reporting as we couldn’t get direct integration to these Lending companies due to according to them, “Licence”.
 
 ### What didn't go well
 
