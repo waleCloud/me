@@ -1,10 +1,10 @@
 ---
 title: Artificial What ifs...
-date: "2025-29-04T02:50:00.169Z"
-description: Artificial Intelligence rave and wave decluttering.
-featuredImage: ./img/artificial-what-if.svg
-category: ["tech", "artificial-intelligence"]
-tags: ["AI", "future-of-work", "technology", "AI-What-IFs"]
+date: "2025-04-29T02:50:00.169Z"
+description: Artificial Intelligence rave and wave decluttering. I have been sitting on this thought about Artificail Intelligence and how we've and still adapting to this big step in the journey of creating a near human level form of intelligence, i argue that we've definitely created a knowledge bank greater than one any human would be capabale of.
+featuredImage: ./img/artificial-what-ifs.png
+category: ["Tech", "artificial-intelligence"]
+
 ---
 
 I have been sitting on this thought about Artificail Intelligence and how we've and still adapting to this big step in the journey of creating a near human level form of intelligence, i argue that we've definitely created a knowledge bank greater than one any human would be capabale of.
