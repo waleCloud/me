@@ -5,9 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import PostCard from "../components/PostCard"
 import Seo from "../components/seo"
-import ProteusAI from 'proteus-sdk';
 
-const proteus = new ProteusAI('664cae3180e851335f73bf6c');
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
