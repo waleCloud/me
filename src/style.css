@@ -319,6 +319,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+#cusdis-wrapper {
+  border-top: 1px solid var(--color-accent);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {

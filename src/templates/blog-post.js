@@ -1,19 +1,24 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
+import { ReactCusdis } from 'react-cusdis'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/SEO"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/SEO";
 
-const BlogPostTemplate = ({ data, location }) => {  
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
-  const prevSlug = previous?.frontmatter.category && previous.frontmatter.category[0] + previous.fields.slug
-  const nextSlug = next?.frontmatter.category && next.frontmatter.category[0] + next.fields.slug
-  
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+const BlogPostTemplate = ({ data, location }) => {
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
+  const prevSlug =
+    previous?.frontmatter.category &&
+    previous.frontmatter.category[0] + previous.fields.slug;
+  const nextSlug =
+    next?.frontmatter.category &&
+    next.frontmatter.category[0] + next.fields.slug;
+
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -42,6 +47,17 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
+      <div id="cusdis-wrapper">
+      <ReactCusdis
+        attrs={{
+          host: 'https://cusdis.com',
+          appId: '0e70457c-0642-4497-9409-0b96a6509644',
+          pageId: post.id,
+          pageTitle: post.frontmatter.title,
+          pageUrl: `https://walecloud.me/${post.frontmatter.category[0]}${post.fields.slug}`
+        }}
+      />
+      </div>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -69,10 +85,10 @@ const BlogPostTemplate = ({ data, location }) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -127,4 +143,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
