@@ -5,7 +5,7 @@ import { ReactCusdis } from 'react-cusdis'
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import Seo from "../components/SEO";
+import Seo from "../components/seo";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;

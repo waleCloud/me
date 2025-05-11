@@ -3,7 +3,7 @@ title: The engineering meeting paradox
 date: "2025-04-04T00:00:00.000Z"
 description: What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is, meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage, overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
 category: ["Tech"]
-featuredImage: ./img/The engineering meeting paradox.png
+featuredImage: ./img/The_engineering_meeting_paradox.png
 
 ---
 
