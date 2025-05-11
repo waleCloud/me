@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Seo from "../components/SEO"
 
 const BlogPostTemplate = ({ data, location }) => {  
   const post = data.markdownRemark
@@ -20,6 +20,8 @@ const BlogPostTemplate = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.featuredImage.publicURL}
+        url={`https://walecloud.me/${post.frontmatter.category}${post.fields.slug}`}
       />
       <article
         className="blog-post"
@@ -96,10 +98,14 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          publicURL
         }
         description
         category
         tags
+      }
+      fields {
+        slug
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
