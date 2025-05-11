@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         image={post.frontmatter.featuredImage.publicURL}
-        url={`https://walecloud.me/${post.frontmatter.category}${post.fields.slug}`}
+        url={`https://walecloud.me/${post.frontmatter.category[0]}${post.fields.slug}`}
       />
       <article
         className="blog-post"
