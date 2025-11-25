@@ -1,6 +1,6 @@
 ---
 title: Back at Reboot Hackathon - Edinburgh Edition
-date: "2024-11-25T00:00:00.169Z"
+date: "2025-11-25T00:00:00.169Z"
 featuredImage: ./img/wale_x_sam.jpg
 description: Tuesday, November 11th found me back at Reboot Hackathon, this time in Edinburgh. It was an all day affair from 8:30AM to 6:30PM of pure energy, brainstorming, building, debugging, and that familiar hum of engineers in flow state.
 category: ["Tech"]
