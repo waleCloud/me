@@ -2,7 +2,7 @@
 title: OnBuddy 2025 Refection -  We Stopped Building a Tool and Started Building an Operator
 date: "2025-12-23T00:15:00.169Z"
 description: The Year We Stopped Building a Tool and Started Building an Operator. As we close out 2025, I want to share the most important lesson we learned this year building OnBuddy, and why it's changed everything about how we think about workplace technology.
-featuredImage: ./img/2025_OnBuddy.png
+featuredImage: ./img/OnBuddy_thank_you.png
 category: ["Tech", "artificial-intelligence"]
 ---
 
@@ -21,6 +21,7 @@ When we started building OnBuddy, we made the same mistake everyone else did. We
 Our users didn't need another productivity tool. They needed an operator. Someone (or something) that could actually DO the work, not just organize it. They needed a system that could not only answer questions, but execute HRIS workflows, update records, triage requests, and route complex issues to the right human, all without leaving their workspace and not being prompted to do so all the time.
 
 So we rebuilt our approach.
+![OnBuddy 2025](./img/2025_OnBuddy.png)
 
 Today, OnBuddy resolves 99% of employee queries automatically. It handles onboarding workflows, manages employee records, maintains org charts, runs document processes, and operates across Slack, Teams, WhatsApp, and email. But more importantly, it does this while learning your organization's specific processes and adapting to how your team actually works.
 
@@ -37,6 +38,8 @@ When you solve for HR and Ops, you're not just automating tasks. You're creating
 **The future of work means making humans unnecessary for tasks that don't need human judgment.**
 
 ### To Our Community
+
+![OnBuddy 2025](./img/OnBuddy_thank_you.png)
 
 None of what we've built would exist without our early users, testers, and customers who trusted us when we were just an onboarding checklist manager and stayed with us as we completely reimagined what we were building.
 
