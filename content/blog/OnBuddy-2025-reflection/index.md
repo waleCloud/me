@@ -10,7 +10,7 @@ category: ["Tech", "artificial-intelligence"]
 
 The Year We Stopped Building a Tool and Started Building an Operator. As we close out 2025, I want to share the most important lesson we learned this year building OnBuddy, and why it's changed everything about how we think about workplace technology
 
-The average employee now toggles between 6-11 different applications to get their work done. HR and Ops teams are drowning in Slack messages, email requests, and support tickets for things that shouldn't require human intervention. "Can you update my address?" "Where's the employee handbook?" "How do I request PTO?" These aren't complex queries. They're process execution disguised as questions.
+The average employee now toggles between 6-11 different applications to get their work done. HR and Ops teams are drowning in Slack messages, email requests, and support tickets for things that shouldn't require human intervention. "Can you update my address?" "Where's the employee handbook?" "How do I request PTO?" All of these and more aren't complex queries. They're process execution disguised as questions.
 
 The World has spent the last two years obsessed with AI copilots. Tools that help you write faster, code better, analyze data more efficiently. But we missed the real problem: most workplace friction isn't about creation. It's about execution. It's about the mundane, repetitive processes that consume 60-70% of a knowledge worker's day. Then last year saw a lot of AI-Agents sprung out, promising autonomous actions but that also fell short as they produced a lot of qustionable outputs and unreliable in most cases except when prompted.
 
