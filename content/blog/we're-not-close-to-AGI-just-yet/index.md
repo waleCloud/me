@@ -16,16 +16,16 @@ We have to really understand what it means to be Generally Intelligent for human
 
 There's no established textbook definition for General Intelligence, however; it has core traits that matter
 
-- Generality:: solves many different kinds of problems, not just one task or domain.
-- Transfer Learning:: applies knowledge from one domain to another without full retraining.
-- Sample Efficiency:: learns from few examples or weak supervision.
-- Adaptability:: handles novel situations and unexpected changes.
-- Reasoning and Planning:: chains multi-step logical steps and forms plans over time.
-- Grounding and Commonsense:: links symbols to real world meaning and causal relations.
-- Continual Learning:: gains new skills without catastrophic forgetting.
-- Autonomy and Goal pursuit:: sets and pursues sub-goals with minimal human direction.
-- Meta-cognition and Self-improvement:: monitors its own performance and refines strategies.
-- Robustness and Safety:: behaves reliably under distribution shifts and respects constraints.
+- **Generality::** solves many different kinds of problems, not just one task or domain.
+- **Transfer Learning::** applies knowledge from one domain to another without full retraining.
+- **Sample Efficiency::** learns from few examples or weak supervision.
+- **Adaptability::** handles novel situations and unexpected changes.
+- **Reasoning and Planning::** chains multi-step logical steps and forms plans over time.
+- **Grounding and Commonsense::** links symbols to real world meaning and causal relations.
+- **Continual Learning::** gains new skills without catastrophic forgetting.
+- **Autonomy and Goal pursuit::** sets and pursues sub-goals with minimal human direction.
+- **Meta-cognition and Self-improvement::** monitors its own performance and refines strategies.
+- **Robustness and Safety::** behaves reliably under distribution shifts and respects constraints.
 
 From these traits, we can define General Intelligence as the the ability to solve a wide variety of generic problems under unfamiliar environments with autonomy of action and consequences, to learn efficiently from limited experience and transfer such skills between domains. it implies more than pattern matching. it implies causal understanding, planning, persistent memory, and the capacity to pursue goals with little supervision.
 
@@ -62,4 +62,4 @@ We will also begin to see what i will call Agency Operators on the application l
 
 The first iteration of this we've seen with MCPs, function and tool callings, the next iteration will be agency for the agents with less and less human inputs.
 
-comes next the AWO - Autonomous Worker Operators.
+What comes next is what I term AWO - Autonomous Worker Operators. What is AWO? I will more on this in the next article.
