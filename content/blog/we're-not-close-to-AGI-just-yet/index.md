@@ -1,6 +1,6 @@
 ---
 title: Hype Gap - We're not close...Just yet!
-date: "2025-12-27T04:12:00.169Z"
+date: "2025-12-27T12:12:00.169Z"
 description: Despite claims from Big AI Tech execs, we're nowhere near Artificial General Intelligence. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores - it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
 featuredImage: ./img/agi_hype_gap.png
 category: ["Tech", "artificial-intelligence"]
