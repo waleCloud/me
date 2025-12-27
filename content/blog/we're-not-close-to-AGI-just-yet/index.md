@@ -1,10 +1,11 @@
 ---
-title: Operators - As a step towards Autonomous General Worker Intelligence
+title: AGI Hype Gap - We're not close to AGI...Just yet!
 date: "2025-12-27T16:12:00.169Z"
 description: Despite claims from Big Tech executives, we're nowhere near AGI. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores—it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
-featuredImage: ./img/OnBuddy_thank_you.png
+featuredImage: ./img/agi_hype_gap.png
 category: ["Tech", "artificial-intelligence"]
 ---
+
 Despite claims from Big Tech executives, we're nowhere near AGI. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores—it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
 
 Big AI Tech Execs will have you believing that we're close to AGI due to massive success and impact of LLMs in the past ~3 years. well I do not agree with this as you will too after this writeup.
@@ -45,6 +46,8 @@ Current LLM hype is premature to suggest that we're close to AGI until we can ev
 
 ### An Example of LLM failure on the path to AGI
 
+![Pattern Matching != General Intelligence 2025](./img/agi_minimalist_abstract.png)
+
 Real time Game Learning - Put an LLM in control of a simple but novel video game it's never seen in its training data, for eaxmple a custom puzzle game with unique mechanics. A human player figures out the rules through trial and error in minutes. The LLM either fails completely or requires thousands of examples to learn what a human grasps in 10 attempts.
 
 It can't build a mental model on the fly, test hypotheses, and adapt. This is the transfer learning and sample efficiency gap in action.
@@ -57,4 +60,6 @@ We shall begin to see AI doing more cross-domain activity, though it would be br
 
 We will also begin to see what i will call Agency Operators on the application layer, AI operators that will not just respond, act but have total agency of action and initiatives across surface areas they've been exposed to at some point with minimal ongoing human direction.
 
-The first iteration of this we've seen with MCPs, function and tool callings, the next itration will be agency for the agents with less and less context to operate.
+The first iteration of this we've seen with MCPs, function and tool callings, the next itration will be agency for the agents with less and less human inputs.
+
+comes next the AWO - Autonomous Worker Operators.
