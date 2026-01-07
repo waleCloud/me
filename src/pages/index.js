@@ -6,18 +6,15 @@ import Layout from "../components/layout"
 import PostCard from "../components/PostCard"
 import Seo from "../components/seo"
 
-
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-    // Extract unique categories from posts
-    const categories = Array.from(
-      new Set(
-        posts.flatMap(post => post.frontmatter.category)
-      )
-    )
-  
+  // Extract unique categories from posts
+  const categories = Array.from(
+    new Set(posts.flatMap(post => post.frontmatter.category))
+  )
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -34,8 +31,10 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Wale Ayandiran"
-      meta="Wale Ayandiran, Founder, Tech founder, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, Tech Lead, Engineering Leadership" />
+      <Seo
+        title="Wale Ayandiran"
+        meta="Wale Ayandiran, Founder, tech founder, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, tech Lead, Engineering Leadership"
+      />
       <Bio categories={categories} />
 
       <ol style={{ listStyle: `none` }}>
@@ -44,7 +43,7 @@ const BlogIndex = ({ data, location }) => {
           const category = post?.frontmatter?.category
 
           const slug = `${category ? category[0] : "blog"}${post.fields.slug}`
-          
+
           return (
             <li key={post.fields.slug}>
               <PostCard

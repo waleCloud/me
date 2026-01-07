@@ -2,16 +2,15 @@
 title: The engineering meeting paradox
 date: "2025-04-04T00:00:00.000Z"
 description: What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is, meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage, overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
-category: ["Tech"]
+category: ["tech"]
 featuredImage: ./img/The_engineering_meeting_paradox.png
-
 ---
 
 What if I told you the most critical battles in software engineering aren’t fought in code repositories, but in meetings? These are the arenas where time either dies a slow, agonizing death or emerges victorious with a clear decision in hand. Engineers love to hate meetings, but the truth is, meetings aren’t the enemy. But if your engineering team’s calendar looks like a Jira board after a production outage, overloaded, chaotic, and littered with unresolved dependencies—you’re not having meetings. You’re hosting a recurring funeral for productivity.
 
 ## When "Just Send an Email" Isn't Enough: Navigating Meeting Culture in Engineering
 
-Ever notice how we engineers can spend hours optimizing database queries to save milliseconds but then sit through hour-long meetings where the only decision made is to **schedule another meeting?** The irony isn't lost on us 😀. In a world where ***"this meeting could have been an email"*** has become a battle cry, we often miss the nuanced reality of when meetings actually create value versus when they're just ceremonial time sinks.
+Ever notice how we engineers can spend hours optimizing database queries to save milliseconds but then sit through hour-long meetings where the only decision made is to **schedule another meeting?** The irony isn't lost on us 😀. In a world where **_"this meeting could have been an email"_** has become a battle cry, we often miss the nuanced reality of when meetings actually create value versus when they're just ceremonial time sinks.
 
 ## The Meeting Spectrum: Time Vampires vs. Decision Accelerators
 
@@ -33,12 +32,12 @@ This meeting is like a group text where everyone must read their message aloud. 
 
 The Transformation:
 
-    Turn the stand-up into a pit stop. 
-    
+    Turn the stand-up into a pit stop.
+
     In a Formula One race, pit crews don’t narrate their wrench-turning; they strategize, adapt, and solve immediate problems.
-    
-    A stand-up should be a 15-minute tactical huddle: “We’re stuck on the payment gateway integration, who can pair with Dev A this morning?” 
-    
+
+    A stand-up should be a 15-minute tactical huddle: “We’re stuck on the payment gateway integration, who can pair with Dev A this morning?”
+
     Time saved: 80 hours/year per team.
 
 ### 2. The Decision-less Discussion
@@ -83,19 +82,18 @@ Poor planning meetings are wish-fulfillment exercises: "Let's pull in all these 
 
 The Transformation: Turn sprint planning into investments decisions.
 
-    Effective planning meetings are like investment decisions – 
+    Effective planning meetings are like investment decisions –
     consciously allocating limited resources (developer time) to generate maximum value.
-    
+
     They acknowledge uncertainty and build in contingency.
 
     For example: "These three items are must-haves. These next two are stretch goals if things go smoothly."
-
 
 ## Engineering leadership playbook
 
 Here's my two penny on how engineering leaders should handle meetings: The challenge isn't eliminating meetings – it's curating which ones deserve to exist and how they should function.
 
-***Put meetings in the same bracket as code:***
+**_Put meetings in the same bracket as code:_**
 
     Refactor mercilessly. If a meeting isn’t yielding value, delete it.
 

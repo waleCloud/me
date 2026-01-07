@@ -3,8 +3,7 @@ title: Scaling Frontend Applications - Coding Guidelines
 date: "2022-04-03T15:00:00.169Z"
 featuredImage: ./img/building.png
 description: Structuring your frontend application can become tricky as your product and codebase grows, In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size.
-category: ["Tech"]
-
+category: ["tech"]
 ---
 
 Structuring your frontend application can become tricky as your product and codebase grows. In this post, I will be sharing what I have found to a working solution for almost any kind of Frontend project size. This guideline is strongly inspired by a pattern termed as the <a href="https://www.freecodecamp.org/news/scaling-your-redux-app-with-ducks-6115955638be" target="_blank">duck pattern</a>.
@@ -14,13 +13,13 @@ The entire idea of ducks is to group seemingly related files together in a way t
 Ducks are extroverted, gregarious animals who feel most at minimal fuss when they're in groups.
 Duck pattern at its core is about colocating small files that work together as a unit to make working with them a breeze. Lets see guideline below;
 
-* [Files and Folder Convention](#file-and-folder-convention)
-* [Components](#components)
-  * [Presentational Components](#presentational-components)
-  * [Connected Components](#connected-components)
-  * [Styling Components](#styling-components)
-* [Interacting with Backend](#interacting-with-backend)
-* [State sharing](#state-sharing)
+- [Files and Folder Convention](#file-and-folder-convention)
+- [Components](#components)
+  - [Presentational Components](#presentational-components)
+  - [Connected Components](#connected-components)
+  - [Styling Components](#styling-components)
+- [Interacting with Backend](#interacting-with-backend)
+- [State sharing](#state-sharing)
 
 ### <a name="file-and-folder-convention"></a>File and Folder Convention
 
@@ -30,11 +29,11 @@ Using the feature pattern to colocate feature related files rather than by funct
 
 ```md
 Login/
-  Login.tsx
-  index.ts
-  store/
-    reducers.ts
-    actions.ts
+Login.tsx
+index.ts
+store/
+reducers.ts
+actions.ts
 ```
 
 "Feature-first" refers to naming your top-level folders after the primary feature your app contains, Login in this case.
@@ -43,19 +42,19 @@ Because each new feature comes with its own folder, this technique scales consid
 
 You can have files that aren't associated with any functionality and call them common/shared/core e.t.c. because you want to reuse code across several functionalities in your product.
 
-___
+---
 
 #### Function-first ❌
 
 ```md
 Components/
-  Login.tsx
-  Signup.tsx
+Login.tsx
+Signup.tsx
 Containers/
-  Login.tsx
+Login.tsx
 store/
-  reducers.ts
-  actions.ts
+reducers.ts
+actions.ts
 ```
 
 "Function-first" refers to naming your top-level folders after the purpose of the files they contain.
@@ -71,16 +70,16 @@ Using the "Feature-first" approach, we can generate a general Project struture l
 
 ```md
 src/
-  pages/ ---> Contains top level files rendering as a page
-    login {feature-folder}/ ---> Would contains components, api|hooks|actions files & folders related to login pages, if these components are going to be reused elsewhere aside login, move it into the core/components directory.
-  core/ ---> Globally shared, reusable, components and files JSX related.
-    components/ ---> Globally Shared React components, mostly dumb/presentational components
-      {ComponentName}/
-        ComponentName.tsx ---> Using named exports e.g `export const ComponentName = () => {}` Always keep this file as simple as possible
-        Styles.tsx ---> A case for using styledComponents, all created elements will be stored here, exported using named exports
-        index.ts ---> exports { ComponentName } from './Componentname'
-        utils.ts ---> Optional when you need to move some functions out of the component file to keep things clean.
-  utils/ ---> JS files that are globally needed, helper functions, etc.
+pages/ ---> Contains top level files rendering as a page
+login {feature-folder}/ ---> Would contains components, api|hooks|actions files & folders related to login pages, if these components are going to be reused elsewhere aside login, move it into the core/components directory.
+core/ ---> Globally shared, reusable, components and files JSX related.
+components/ ---> Globally Shared React components, mostly dumb/presentational components
+{ComponentName}/
+ComponentName.tsx ---> Using named exports e.g `export const ComponentName = () => {}` Always keep this file as simple as possible
+Styles.tsx ---> A case for using styledComponents, all created elements will be stored here, exported using named exports
+index.ts ---> exports { ComponentName } from './Componentname'
+utils.ts ---> Optional when you need to move some functions out of the component file to keep things clean.
+utils/ ---> JS files that are globally needed, helper functions, etc.
 ```
 
 ### <a name="components"></a>Components
@@ -89,22 +88,22 @@ Your Frontend Components will most likely be grouped into 2 kinds, presentationa
 
 #### Worthy to Remember
 
-* Endeavor to use functional components all through because, why not 🤷🏾? it saves you from dealing with class components and its numerous lifecycle methods.
-* Have an index file that exports all components from a feature folder, helps to organize your imports and exports.
+- Endeavor to use functional components all through because, why not 🤷🏾? it saves you from dealing with class components and its numerous lifecycle methods.
+- Have an index file that exports all components from a feature folder, helps to organize your imports and exports.
 
 ### <a name="presentational-components"></a> Presentational Components
 
-* Have no dependencies on the rest of the application.
-* Values and callbacks are passed into these via props.
+- Have no dependencies on the rest of the application.
+- Values and callbacks are passed into these via props.
 
 Example:
 
 ```md
 ComponentName/
-  ComponentName.tsx ---> Using named exports e.g `export const ComponentName = () => {}` Always keep this file as simple as possible
-  Styles.tsx ---> A case for using styledComponents, all created elements will be stored here, exported using named exports
-  index.ts ---> exports { ComponentName } from './Componentname'
-  utils.ts ---> Optional when you need to move some functions out of the component file to keep things clean.
+ComponentName.tsx ---> Using named exports e.g `export const ComponentName = () => {}` Always keep this file as simple as possible
+Styles.tsx ---> A case for using styledComponents, all created elements will be stored here, exported using named exports
+index.ts ---> exports { ComponentName } from './Componentname'
+utils.ts ---> Optional when you need to move some functions out of the component file to keep things clean.
 ```
 
 ```tsx
@@ -115,23 +114,23 @@ export const PresentationComponent = ({ prop1, props2 ...propN }) => (
 
 ### <a name="connected-components"></a>Connected Components
 
-* are responsible for retrieving data.
-* are aware of the store and be connected to it.
-* provide data to other components.
-* are responsible for dispatching actions.
-* grab data from store and then passes that data down to its children as props.
+- are responsible for retrieving data.
+- are aware of the store and be connected to it.
+- provide data to other components.
+- are responsible for dispatching actions.
+- grab data from store and then passes that data down to its children as props.
 
 Example:
 
 ```md
 ComponentName/
-  ComponentName.tsx ---> Using named exports e.g `export const ComponentName = () => {}` Always keep this file as simple as possible
-  Styles.jsx ---> A case for styledComponents, all created elements will be stored here, exported using named exports
-  actions/ ---> handles all Async events, and certain Events that needs to be seperated from the components.
-    store/ reducers/ etc
-    api|hooks/
-  index.js ---> exports { ComponentName } from './Componentname'
-  utils.js ---> Optional when you need to move some functions out of the component file to keep things clean.
+ComponentName.tsx ---> Using named exports e.g `export const ComponentName = () => {}` Always keep this file as simple as possible
+Styles.jsx ---> A case for styledComponents, all created elements will be stored here, exported using named exports
+actions/ ---> handles all Async events, and certain Events that needs to be seperated from the components.
+store/ reducers/ etc
+api|hooks/
+index.js ---> exports { ComponentName } from './Componentname'
+utils.js ---> Optional when you need to move some functions out of the component file to keep things clean.
 ```
 
 ### <a name="styling-components"></a> Styling Components
@@ -179,7 +178,7 @@ Same philosophy applies regardless of the state library employed.
 
 ```md
 Actions/
-  reducers/
+reducers/
 ```
 
 ---
@@ -189,4 +188,3 @@ This writeup is highly opinionated on my experience but a lot of teams both smal
 Let me know if you find this useful or have questions or share how you've been able to structure your frontend applications at work.
 
 Photo by <a href="https://unsplash.com/@heysupersimi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simone Hutsch</a> on <a href="https://unsplash.com/s/photos/folder-structure?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  

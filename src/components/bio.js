@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Socials } from "./Socials"
 
-const Bio = ({categories}) => {
+const Bio = ({ categories }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -33,7 +33,7 @@ const Bio = ({categories}) => {
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social    
+  const social = data.site.siteMetadata?.social
   return (
     <div className="bio">
       <StaticImage
@@ -54,7 +54,7 @@ const Bio = ({categories}) => {
           I'm Wale Ayandiran, a software engineer and tech entrepreneur.
           <br />
           {<Socials social={social} />}
-          </p>
+        </p>
       )}
     </div>
   )

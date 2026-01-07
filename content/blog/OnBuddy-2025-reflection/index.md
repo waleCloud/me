@@ -3,7 +3,7 @@ title: OnBuddy 2025 Reflection -  We Stopped Building a Tool and Started Buildin
 date: "2025-12-23T00:15:00.169Z"
 description: The Year We Stopped Building a Tool and Started Building an Operator. As we close out 2025, I want to share the most important lesson we learned this year building OnBuddy, and why it's changed everything about how we think about workplace technology.
 featuredImage: ./img/OnBuddy_thank_you.png
-category: ["Tech", "artificial-intelligence"]
+category: ["tech", "artificial-intelligence"]
 ---
 
 ### The Problem We're All Ignoring

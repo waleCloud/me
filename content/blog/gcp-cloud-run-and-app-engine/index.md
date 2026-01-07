@@ -1,9 +1,9 @@
---- 
+---
 title: Moving from Heroku to GCP Cloud Run and App Engine - A startup's Dilemma in the early days
 date: "2025-05-11T15:00:00.169Z"
 featuredImage: ./img/heroku_to_gcp.png
-description: Cost optimization is definitely not one of the things you should be focused on as an early stage startup yet to raise funds, still finding (PMF) product market fit. Tech infrastructure scaling usually rings your door bell when the time is near, you however need to know when and how to respond.
-category: ["Tech"]
+description: Cost optimization is definitely not one of the things you should be focused on as an early stage startup yet to raise funds, still finding (PMF) product market fit. tech infrastructure scaling usually rings your door bell when the time is near, you however need to know when and how to respond.
+category: ["tech"]
 ---
 
 Cost optimization is definitely not one of the things you should be focused on as an early stage startup yet to raise funds, still finding (PMF) product market fit. The tech infrastructure scaling usually rings your door bell when the time is near, you however need to know when and how to respond.
@@ -14,7 +14,7 @@ At [ProteusAI](https://www.linkedin.com/company/proteusai/), the inital product 
 
 After a couple of successful demos and finally some decided to take the leap of faith and pay for the service as they found value in it to help them with their own product, we began to realise we need to increase the heroku dyno to serve these users or so we thought.
 
-Thinking about architecting a scalabale product for a pre pre seed and proof of concept type of product is a fools errand and quite frankly a waste of everyone's time. A saying comes to mind about this and it goes thus; can't remeber where i read it from *`"A unit of risk it greater than a 100 unit of perfection"`*.
+Thinking about architecting a scalabale product for a pre pre seed and proof of concept type of product is a fools errand and quite frankly a waste of everyone's time. A saying comes to mind about this and it goes thus; can't remeber where i read it from _`"A unit of risk it greater than a 100 unit of perfection"`_.
 
 `The job of a startup is to validate or invalidate your risks in the early days as much as possible and as quick as possible.`
 
@@ -103,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write  # Required for OIDC authentication
+      id-token: write # Required for OIDC authentication
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -111,7 +111,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
 
       # Generate a .env.staging file from GitHub Variables
       - name: Generate config file
@@ -120,10 +120,9 @@ jobs:
           envsubst < service.stage.yaml > service.staging.yaml
             echo "Generated config:"
             cat service.staging.yaml
-        env:
-          ...
+        env: ...
 
-      - name: Build Service 
+      - name: Build Service
         run: |
           yarn install
           yarn run build
@@ -132,20 +131,20 @@ jobs:
         run: |
           docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/...:${{ github.sha }} .
 
-      - id: 'auth'
-        uses: 'google-github-actions/auth@v2'
+      - id: "auth"
+        uses: "google-github-actions/auth@v2"
         with:
-          create_credentials_file: 'true'
+          create_credentials_file: "true"
           workload_identity_provider: "${{ secrets.GCP_WORKLOAD_ID_PROVIDER }}"
           service_account: "${{ secrets.GCP_SERVICE_ACCOUNT }}"
 
       - name: Configure Docker for Google Cloud
         run: gcloud auth configure-docker
-  
+
       - name: Push Docker image
         run: |
           docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/...:${{ github.sha }}
-      
+
       - name: Deploy to Cloud Run Prod
         if: github.ref == 'refs/heads/staging'
         run: |

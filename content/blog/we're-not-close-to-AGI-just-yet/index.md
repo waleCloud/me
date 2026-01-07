@@ -1,14 +1,14 @@
 ---
 title: Hype Gap - We're not close...Just yet!
 date: "2025-12-27T12:12:00.169Z"
-description: Despite claims from Big AI Tech execs, we're nowhere near Artificial General Intelligence. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores - it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
+description: Despite claims from Big AI tech execs, we're nowhere near Artificial General Intelligence. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores - it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
 featuredImage: ./img/agi_hype_gap.png
-category: ["Tech", "artificial-intelligence"]
+category: ["tech", "artificial-intelligence"]
 ---
 
-Despite claims from Big AI Tech execs, we're nowhere near Artificial General Intelligence. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores - it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
+Despite claims from Big AI tech execs, we're nowhere near Artificial General Intelligence. Current LLMs excel at pattern matching but lack the core traits that defines General Intelligence. True AGI requires more than benchmark scores - it demands cross-domain environmental success, robust adaptation to novelty, and self-directed learning. While we're beginning to see early steps toward agentic systems through MCPs tool calling, these are brute-force approximations for a semblance of agency. The path to AGI will require AI systems that operate with high agency across unfamiliar domains with minimal supervision, a capability that remains fundamentally out of reach for today's LLMs.
 
-Big AI Tech Execs will have you believing that we're close to AGI due to massive success and impact of LLMs in the past ~3 years. well I do not agree with this as you will too after this write up.
+Big AI tech Execs will have you believing that we're close to AGI due to massive success and impact of LLMs in the past ~3 years. well I do not agree with this as you will too after this write up.
 
 We have to really understand what it means to be Generally Intelligent for humans and what qualifies to assume an entity is generally intelligent, what traits constitutes having General Intelligence.
 

@@ -3,11 +3,10 @@ title: Building the right way — Html5 Semantics
 date: "2017-09-19T15:00:00.169Z"
 featuredImage: ./img/image.png
 description: Hello there! I hope you were able to get your feet wet with previous posts on web development front-end.
-category: ["Tech", "accessibility"]
-
+category: ["tech", "accessibility"]
 ---
 
-***First published on [justcodenow](https://medium.com/justcodenow/building-the-right-way-html5-semantics-7190bdb269c4)***
+**_First published on [justcodenow](https://medium.com/justcodenow/building-the-right-way-html5-semantics-7190bdb269c4)_**
 
 Hello there!
 
@@ -20,15 +19,16 @@ W3CValidator, a service by the World Wide Web Consortium (W3C.org) to check for 
 In this post, we will be learning how to construct a webpage with Html5 semantics which includes the following:
 
 ```html
-  <!doctype>
-  <header></header>
-  <nav></nav>
-  <main></main>
-  <section></section>
-  <article></article>
-  <aside></aside>
-  <footer></footer>
+<!DOCTYPE >
+<header></header>
+<nav></nav>
+<main></main>
+<section></section>
+<article></article>
+<aside></aside>
+<footer></footer>
 ```
+
 You can already tell with their names what they represent.
 
 The appropriate use of these semantics will make search engines like Google to better index your sites.
@@ -44,6 +44,7 @@ Right Sidebar
 Main content area
 Footer menu.
 ```
+
 Note that these tags are not styled by default to be positioned as their name implies on a webpage. You still have to write a CSS for it to be well positioned.
 
 Here’s a sketch of what we will be building. :)
@@ -54,18 +55,14 @@ Begin by writing the markup for the sketch above.
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-   <meta charset="utf-8">  
-   <title>HTML5 SEMANTICS</title>
-</head>
-<body>
-  <header>
-    
-  </header>
-  <nav>
-    
-  </nav>
-  <main>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 SEMANTICS</title>
+  </head>
+  <body>
+    <header></header>
+    <nav></nav>
+    <main>
       <section>
         <h2></h2>
         <article>
@@ -75,17 +72,14 @@ Begin by writing the markup for the sketch above.
           <h2></h2>
         </article>
       </section>
-      
-      <aside>
-        
-      </aside>
-  </main>
-  <footer>
-    
-  </footer>
-</body>
+
+      <aside></aside>
+    </main>
+    <footer></footer>
+  </body>
 </html>
 ```
+
 You must have noticed that I added some tags (<h2></h2>) to the markup which I did not mention. This is because to make valid use of the tags (article,section) a heading tag must follow it.
 
 It’s time to have our markup styled, before that, how about we get some random texts to fill up our page. Do this quickly.
@@ -93,34 +87,55 @@ It’s time to have our markup styled, before that, how about we get some random
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>HTML5 SEMANTICS</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Site Name here</h1>
-    <!-- logo here -->
-  </header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-  <main>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 SEMANTICS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Site Name here</h1>
+      <!-- logo here -->
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <main>
       <section>
         <h2>Welcome Section</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
         <article>
-        <h2>This is article 1</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </article>
-      <article>
-        <h2>This is article 2</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </article></section>
-      
+          <h2>This is article 1</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </article>
+        <article>
+          <h2>This is article 2</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </article>
+      </section>
+
       <aside>
         This is a sidebar
         <p>link 1</p>
@@ -128,65 +143,76 @@ It’s time to have our markup styled, before that, how about we get some random
         <p>other stuff</p>
         <p>now</p>
         <p>now</p>
-        <p>now</p><p>now</p></aside>
-  </main>
-  <footer>
-    &COPY; 2017
-  </footer>
-</body>
+        <p>now</p>
+        <p>now</p>
+      </aside>
+    </main>
+    <footer>&COPY; 2017</footer>
+  </body>
 </html>
 ```
+
 Create a new file, name it style.css
 
 Add the following codes to it…
+
 ```css
-html, body {
- margin: 2%;
- padding: 0;
- font-family: roboto;
- font-size: 20px;
-}* {
- box-sizing: border-box;
- margin-top: 0px;
-}header {
- height: 80px;
- border: 1px solid black;
- margin: 1%;
-}nav {
- height: 50px;
- border: 1px groove grey;
- text-align: center;
- text-transform: uppercase;
- margin: 1%;
-}nav a {
- text-decoration: none;
- line-height: 2.5;
-}main {
- display: flex;
- border: 2px solid grey;
- margin: 1%;
-}section {
- flex: 5;
- border: 1px solid black;
- margin: 1%;
-}article {
- flex: 5;
- border: 1px solid grey;
- margin: 1%;
- 
-}aside {
- flex: 2;
- border: 1px solid grey;
- float: right;
- display: block;
- width: 30%;
- 
-}footer {
- height: 30px;
- margin-bottom: 50px;
- border: 1px solid grey;
+html,
+body {
+  margin: 2%;
+  padding: 0;
+  font-family: roboto;
+  font-size: 20px;
+}
+* {
+  box-sizing: border-box;
+  margin-top: 0px;
+}
+header {
+  height: 80px;
+  border: 1px solid black;
+  margin: 1%;
+}
+nav {
+  height: 50px;
+  border: 1px groove grey;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1%;
+}
+nav a {
+  text-decoration: none;
+  line-height: 2.5;
+}
+main {
+  display: flex;
+  border: 2px solid grey;
+  margin: 1%;
+}
+section {
+  flex: 5;
+  border: 1px solid black;
+  margin: 1%;
+}
+article {
+  flex: 5;
+  border: 1px solid grey;
+  margin: 1%;
+}
+aside {
+  flex: 2;
+  border: 1px solid grey;
+  float: right;
+  display: block;
+  width: 30%;
+}
+footer {
+  height: 30px;
+  margin-bottom: 50px;
+  border: 1px solid grey;
 }
 ```
+
 Link the css to the html file.
 
 Notice that we didn’t create any class property in our css, it’s a preference thing for me. Otherwise, you can create a class property in your css.

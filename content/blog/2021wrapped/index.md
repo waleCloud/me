@@ -2,17 +2,18 @@
 title: 2021Wrapped
 date: "2022-01-02T15:00:00.169Z"
 description: No pressure.
-category: ["Life"]
+category: ["life"]
 featuredImage: ./img/2021wrapped.jpg
-
 ---
-TL;DR
-> 2021, the year that kept giving. A lot of things happened this year for sure; some wins and some lessons disguised as Ls (Loses). Summary about the summary; I left my full-time role, Moved cities, Signed up with a Professional Career Coach, Did Quality work, Put smiles on peoples faces, Made some new friends in Q4.
 
+TL;DR
+
+> 2021, the year that kept giving. A lot of things happened this year for sure; some wins and some lessons disguised as Ls (Loses). Summary about the summary; I left my full-time role, Moved cities, Signed up with a Professional Career Coach, Did Quality work, Put smiles on peoples faces, Made some new friends in Q4.
 
 ## How it Started
 
 ---
+
 2020 ended with me having to battle for my sanity from life challenges. Looking back, one of the cause was me wanting to feel loved as it seemed I was missing out. This used to be hard to admit coming from someone who is supposedly content.
 
 2021 started with me to the world <https://medium.com/@walecloud/hope-by-doing-7d6eb371d61a>
@@ -46,12 +47,14 @@ Sad to say we’re at a phase where we’re not sure how to proceed but as with 
 > I had a tough year working or my years of working began showing signs of burnout and an overdue rest was needed. I visited the hospital a bit too much in the last 3 years than I ever did in my Adult life.
 
 ---
+
 `August 20 2021 I resigned from my role at the NY company Namely after almost 2 years. I had a great time there and loved the work we did but the end is part of our journey.`
 
 I rested and enjoyed time with myself and my loved ones, planned for the next phase of my life, my heavy black tax and all. I thought I was going crazy but something in my head said it was the right decision.
 
 Travelling and living like a nomad was one of those things I wanted to do,
->Oct 5th I took a step to moving to a new city 3 months in and I can say it is one of the best decision I made in 2021.
+
+> Oct 5th I took a step to moving to a new city 3 months in and I can say it is one of the best decision I made in 2021.
 
 ---
 

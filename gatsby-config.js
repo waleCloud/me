@@ -35,9 +35,9 @@ module.exports = {
       options: {
         rule: {
           include: `${__dirname}/src/images`,
-        }
-      }
-    },  
+        },
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -135,18 +135,18 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://walecloud.me',
-       env: {
+        host: "https://walecloud.me",
+        env: {
           development: {
-            policy: [{userAgent: '*', disallow: ['/']}]
+            policy: [{ userAgent: "*", disallow: ["/"] }],
           },
           production: {
-            policy: [{userAgent: '*', allow: '/'}]
-          }
-        }
-      }
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
     },
   ],
 }

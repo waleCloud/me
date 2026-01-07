@@ -3,7 +3,7 @@ title: Twitter historic data scrapping with tweepy.
 date: "2022-11-03T15:00:00.169Z"
 description: Getting tweets and tweets data (dates, like_count, retweets) etc from Twitter is easy as logging into the micro-blogging platform and taking any tweet you want from any publicly available account. This makes sense if one is only interested in a tweet or at most less than 10 tweets from a single account. it becomes a hassle when you need to fetch tweets from multiple users or a significant number of tweets.
 featuredImage: ./img/history.webp
-category: ["Machine-Learning"]
+category: ["machine-Learning"]
 ---
 
 ## Twitter historic data scrapping with tweepy.
@@ -25,8 +25,8 @@ https://github.com/waleCloud/me/blob/91baedc52e5f65002bba01cf2bc062e9e9f1ff88/co
 
 - Setup Twitter Developer Account
 - Create an APP and choose Academic Research
-![Twitter developer page](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d0uuswesufogtx4sse3p.png)
-Continue to follow the twitter verification steps and approval.
+  ![Twitter developer page](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d0uuswesufogtx4sse3p.png)
+  Continue to follow the twitter verification steps and approval.
 
 Finally once approval has been granted, it times to begin fetching tweets as far back as you need and the volume, lets get started.
 
@@ -89,7 +89,7 @@ def get_tweets(query, start_time, end_time, next_token):
       user_fields=user_fields,
       next_token=next_token
     )
-  
+
     return fetched_tweets
 
   except Exception as e:
@@ -99,6 +99,7 @@ def get_tweets(query, start_time, end_time, next_token):
 The `get_tweets` function takes 4 parameters which includes the search `query`, `start_time` date to begin searching from, `end_time` end date of search, `next_token` a token that will be sent from twitter when the result is large and can only return a distinct number per request, we will be using this token to make subsequent call to this function. Imagine the next_token as some form of pagination to the next page, in this case the next set of results until it gets to the end of the list.
 
 test out the search to confirm it works
+
 ```python
 
 result = get_tweets('elon musk', '2022-10-01T00:00:01Z', '2022-11-01T00:00:01Z',next_token=None)
@@ -131,7 +132,7 @@ def append_to_csv(result_set, file_name):
 
         author_id = tweet['author_id']
         created_at = tweet['created_at']
-        if ('geo' in tweet):   
+        if ('geo' in tweet):
             geo = tweet['geo']['place_id']
         else:
             geo = " "
@@ -143,10 +144,10 @@ def append_to_csv(result_set, file_name):
         quote_count = tweet['public_metrics']['quote_count']
         source = tweet['source']
         text = tweet['text']
-        
+
         # Assemble all data in a list
-        res = [author_id, created_at, geo, tweet_id, lang, like_count, quote_count, reply_count, retweet_count, source, text]        
-        
+        res = [author_id, created_at, geo, tweet_id, lang, like_count, quote_count, reply_count, retweet_count, source, text]
+
         # Append the result to the CSV file
         csv_writer.writerow(res)
         counter += 1
@@ -155,7 +156,7 @@ def append_to_csv(result_set, file_name):
     csv_file.close()
 
     # Print the number of tweets for this iteration
-    print("# of Tweets added from this response: ", counter) 
+    print("# of Tweets added from this response: ", counter)
 ```
 
 Things are beginning to take shape, now the final piece to joining all these functions to create a stream of tweets.
@@ -204,11 +205,8 @@ The above code runs recursively until there's no Next_token which stops the sear
 
 With that we can now begin the stream by running `run_fetch()`.
 
-
 With this approach, you can get as many tweets as you want continuously, one caveat is your machine needs to be running and not go into hibernate/sleep mode else the process breaks.
 
 One way I can quickly think of to mitigate this is to run this over the cloud on something like google colab, that way you don't have to worry about your machine sleeping as truly its google's machine that carry's all the burden 😅.
 
-
 I hope this helps someone.
-

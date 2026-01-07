@@ -15,7 +15,7 @@ const PostCard = ({ title, date, excerpt, slug }) => (
       </h2>
       <small>{date}</small>
     </header>
-    
+
     <section>
       <p
         dangerouslySetInnerHTML={{
@@ -24,7 +24,9 @@ const PostCard = ({ title, date, excerpt, slug }) => (
         itemProp="description"
       />
     </section>
-      <Link to={slug} className="read-more">Read More</Link>
+    <Link to={slug} className="read-more">
+      Read More
+    </Link>
   </article>
 )
 

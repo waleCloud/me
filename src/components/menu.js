@@ -1,5 +1,5 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link } from "gatsby"
+import React from "react"
 
 const Menu = ({ categories }) => {
   return (
@@ -11,8 +11,8 @@ const Menu = ({ categories }) => {
           </li>
         ))}
       </ul>
-  </section>
+    </section>
   )
 }
 
-export default Menu;
+export default Menu

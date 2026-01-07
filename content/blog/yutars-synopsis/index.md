@@ -2,10 +2,10 @@
 title: Yutars Synopsis
 date: "2022-01-02T17:00:00.169Z"
 description: A quick retro of what happend with Yutars.
-category: ["Startup-stories", "blog"]
+category: ["startup-stories", "blog"]
 featuredImage: ./img/yutars-hq.png
-
 ---
+
 > A quick retro of what happend with Yutars.
 
 ---

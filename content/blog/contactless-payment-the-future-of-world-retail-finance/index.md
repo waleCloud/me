@@ -3,7 +3,7 @@ title: "Contactless Payment: The Future of World Retail Finance"
 date: "2016-11-01"
 description: "There is no question that contactless payment is becoming the new norm pretty much everywhere, with consumers eagerly embracing the speed and convenience of 'tap-to-pay' technology."
 tags: ["Finance", "Technology", "Contactless Payment"]
-category: ["Academia-papers"]
+category: ["academia-papers"]
 publication: "Nigeria - SAST International Conference - The Federal Polytechnic, OFFA"
 file: "/papers/CONTACTLESS_PAYMENT_future_of_world_retail_finance.pdf"
 featuredImage: ./img/contactless-pay.jpg

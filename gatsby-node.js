@@ -1,6 +1,18 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+// Normalize category names for URL paths: trim, lower-case, replace spaces with
+// hyphens and remove unsafe characters. Returns a string like `machine-learning`.
+function normalizeCategory(s) {
+  return encodeURIComponent(
+    String(s || "blog")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "")
+  )
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -45,7 +57,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes  
+  const posts = result.data.allMarkdownRemark.nodes
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
@@ -54,10 +66,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
-      const category = post.frontmatter.category || ["blog" ]// Default to "blog" if no category is specified
-      const slug = `/${category[0]}${post.fields.slug}` // Append category to the slug
+      const rawCategories = post.frontmatter.category || ["blog"] // Default to "blog" if no category is specified
+      const categoryRaw = rawCategories[0]
+      const categoryNormalized = normalizeCategory(categoryRaw)
+      const slug = `/${categoryNormalized}${post.fields.slug}` // Append normalized category to the slug
 
-      
       createPage({
         path: slug,
         component: blogPost,
@@ -65,33 +78,46 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+          categoryRaw,
+          categoryNormalized,
+          slug,
         },
       })
     })
 
-    // Collect all unique categories
-    const allCategories = new Set()
+    // Collect all unique categories and keep a mapping of normalized => original
+    const categoryMap = new Map()
     posts.forEach(post => {
       const categories = post.frontmatter.category || ["blog"]
-      categories.forEach(category => allCategories.add(category))
+      categories.forEach(category => {
+        const n = normalizeCategory(category)
+        if (!categoryMap.has(n)) categoryMap.set(n, category)
+      })
     })
 
-    // Create a page for each category
-    allCategories.forEach(category => {
-      const categoryPosts = posts      
-        .filter(post => post.frontmatter.category && post.frontmatter.category.includes(category))
+    // Create a page for each normalized category
+    categoryMap.forEach((originalCategory, normalizedCategory) => {
+      const categoryPosts = posts
+        .filter(
+          post =>
+            post.frontmatter.category &&
+            post.frontmatter.category.includes(originalCategory)
+        )
         .map(post => ({
-          slug: `/${category}${post.fields.slug}`,
+          slug: `/${normalizeCategory(post.frontmatter.category[0])}${
+            post.fields.slug
+          }`,
           title: post.frontmatter.title,
           date: post.frontmatter.date,
           description: post.frontmatter.description,
         }))
 
       createPage({
-        path: `/${category.toLowerCase()}/`, // Use the category name as the path
+        path: `/${normalizedCategory}/`, // Use the normalized category as the path
         component: categoryTemplate,
         context: {
-          category: category, // Pass the category name to the template
+          category: originalCategory, // Pass the original category name to the template
+          categoryNormalized: normalizedCategory,
           posts: categoryPosts, // Pass the filtered posts to the template
         },
       })
