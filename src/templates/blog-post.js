@@ -1,51 +1,54 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { ReactCusdis } from "react-cusdis"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { createBlogPostingSchema } from "../utils/structured-data"
+import { createAbsoluteUrl, createPostPath } from "../utils/urls"
 
-// Helper to normalize category strings the same way as `gatsby-node.js`
-function normalizeCategory(s) {
-  return encodeURIComponent(
-    String(s || "blog")
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^a-z0-9-]/g, "")
-  )
-}
+const LINKEDIN_URL = "https://www.linkedin.com/in/wale-ayandiran-31717891"
 
-const BlogPostTemplate = ({ data, location, pageContext }) => {
+const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteUrl = data.site.siteMetadata.siteUrl
   const { previous, next } = data
-
-  // Prefer normalized category passed via page context; fallback to normalizing frontmatter
-  const normalizedCategory =
-    pageContext?.categoryNormalized ||
-    normalizeCategory(post.frontmatter.category && post.frontmatter.category[0])
-
+  const postPath = createPostPath(
+    post.frontmatter.category?.[0],
+    post.fields.slug
+  )
+  const postUrl = createAbsoluteUrl(siteUrl, postPath)
   const prevSlug =
-    previous?.frontmatter.category &&
-    `${normalizeCategory(previous.frontmatter.category[0])}${
-      previous.fields.slug
-    }`
+    previous &&
+    createPostPath(previous.frontmatter.category?.[0], previous.fields.slug)
   const nextSlug =
-    next?.frontmatter.category &&
-    `${normalizeCategory(next.frontmatter.category[0])}${next.fields.slug}`
-
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+    next && createPostPath(next.frontmatter.category?.[0], next.fields.slug)
+  const featuredImage = post.frontmatter.featuredImage
+  const featuredImgFluid = featuredImage?.childImageSharp?.fluid
+  const description = post.frontmatter.description || post.excerpt
+  const articleSchema = createBlogPostingSchema({
+    siteUrl,
+    path: postPath,
+    title: post.frontmatter.title,
+    description,
+    image: featuredImage?.publicURL,
+    datePublished: post.frontmatter.publishedDate,
+    dateModified: post.frontmatter.updatedDate,
+    tags: post.frontmatter.tags,
+    category: post.frontmatter.category?.[0],
+  })
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        image={post.frontmatter.featuredImage.publicURL}
-        url={`https://walecloud.me/${normalizedCategory}${post.fields.slug}`}
+        description={description}
+        image={featuredImage?.publicURL}
+        url={postUrl}
+        type="article"
+        schema={articleSchema}
       />
       <article
         className="blog-post"
@@ -54,8 +57,8 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <Img fluid={featuredImgFluid} />
-          <p>{post.frontmatter.date}</p>
+          {featuredImgFluid && <Img fluid={featuredImgFluid} />}
+          <p>{post.frontmatter.displayDate}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -66,17 +69,16 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           <Bio />
         </footer>
       </article>
-      <div id="cusdis-wrapper">
-        <ReactCusdis
-          attrs={{
-            host: "https://cusdis.com",
-            appId: "0e70457c-0642-4497-9409-0b96a6509644",
-            pageId: post.id,
-            pageTitle: post.frontmatter.title,
-            pageUrl: `https://walecloud.me/${normalizedCategory}${post.fields.slug}`,
-          }}
-        />
-      </div>
+      <aside className="post-cta" aria-labelledby="post-cta-heading">
+        <h2 id="post-cta-heading">Continue the conversation</h2>
+        <p>
+          Have thoughts or a different perspective?{" "}
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+            Connect with me on LinkedIn
+          </a>
+          .
+        </p>
+      </aside>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -89,14 +91,14 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         >
           <li>
             {previous && (
-              <Link to={`/${prevSlug}`} rel="prev">
+              <Link to={prevSlug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`/${nextSlug}`} rel="next">
+              <Link to={nextSlug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -118,15 +120,17 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
-      id
       excerpt(pruneLength: 160)
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        publishedDate: date
+        updatedDate: updated
+        displayDate: date(formatString: "MMMM DD, YYYY")
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {

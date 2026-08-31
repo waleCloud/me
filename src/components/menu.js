@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { createCategoryPath } from "../utils/urls"
 
 const Menu = ({ categories }) => {
   return (
@@ -7,7 +8,7 @@ const Menu = ({ categories }) => {
       <ul style={{ listStyle: `none` }}>
         {categories.map(category => (
           <li key={category}>
-            <Link to={`/${category.toLowerCase()}/`}>{category}</Link>
+            <Link to={createCategoryPath(category)}>{category}</Link>
           </li>
         ))}
       </ul>
