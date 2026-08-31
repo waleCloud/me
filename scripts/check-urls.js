@@ -29,8 +29,10 @@ const expectedPostPaths = [
   `/tech/autonomous-worker-operators/`,
   `/tech/gcp-cloud-run-and-app-engine/`,
   `/tech/html5-semantics-building-the-right-way/`,
+  `/tech/in-flight-token-refresh-deep-dive/`,
   `/tech/reboot-edinburgh-2025/`,
   `/tech/scaling-frontend-apps-code-guidelines/`,
+  `/tech/shared-api-platform-token-storms/`,
   `/tech/the-engineering-meeting-paradox/`,
   `/tech/we're-not-close-to-AGI-just-yet/`,
 ]

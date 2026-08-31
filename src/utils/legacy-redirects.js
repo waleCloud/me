@@ -29,6 +29,9 @@ const legacyPathsBySlug = {
     "/html5-semantics-building-the-right-way/",
     "/Tech/html5-semantics-building-the-right-way/",
   ],
+  "/in-flight-token-refresh-deep-dive/": [
+    "/in-flight-token-refresh-deep-dive/",
+  ],
   "/new-beginnings-MSc-Artificial-intelligence/": [
     "/new-beginnings-MSc-Artificial-intelligence/",
     "/Life/new-beginnings-MSc-Artificial-intelligence/",
@@ -41,6 +44,7 @@ const legacyPathsBySlug = {
     "/scaling-frontend-apps-code-guidelines/",
     "/Tech/scaling-frontend-apps-code-guidelines/",
   ],
+  "/shared-api-platform-token-storms/": ["/shared-api-platform-token-storms/"],
   "/the-engineering-meeting-paradox/": [
     "/the-engineering-meeting-paradox/",
     "/Tech/the-engineering-meeting-paradox/",

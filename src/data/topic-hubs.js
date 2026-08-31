@@ -11,6 +11,7 @@ const topicHubs = [
       `Sustainable software delivery`,
     ],
     postSlugs: [
+      `/shared-api-platform-token-storms/`,
       `/the-engineering-meeting-paradox/`,
       `/scaling-frontend-apps-code-guidelines/`,
       `/html5-semantics-building-the-right-way/`,
@@ -48,6 +49,8 @@ const topicHubs = [
       `Engineering standards and practice`,
     ],
     postSlugs: [
+      `/shared-api-platform-token-storms/`,
+      `/in-flight-token-refresh-deep-dive/`,
       `/gcp-cloud-run-and-app-engine/`,
       `/html5-semantics-building-the-right-way/`,
       `/scaling-frontend-apps-code-guidelines/`,
