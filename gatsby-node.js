@@ -1,24 +1,20 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
-// Normalize category names for URL paths: trim, lower-case, replace spaces with
-// hyphens and remove unsafe characters. Returns a string like `machine-learning`.
-function normalizeCategory(s) {
-  return encodeURIComponent(
-    String(s || "blog")
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^a-z0-9-]/g, "")
-  )
-}
+const {
+  createCategoryPath,
+  createPostPath,
+  normalizeCategory,
+} = require(`./src/utils/urls`)
+const { legacyPathsBySlug } = require(`./src/utils/legacy-redirects`)
+const { topicHubs } = require(`./src/data/topic-hubs`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const categoryTemplate = path.resolve("./src/templates/category-page.js") // Single template for all categories
+  const topicHubTemplate = path.resolve(`./src/templates/topic-hub-page.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -69,7 +65,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const rawCategories = post.frontmatter.category || ["blog"] // Default to "blog" if no category is specified
       const categoryRaw = rawCategories[0]
       const categoryNormalized = normalizeCategory(categoryRaw)
-      const slug = `/${categoryNormalized}${post.fields.slug}` // Append normalized category to the slug
+      const slug = createPostPath(categoryRaw, post.fields.slug)
 
       createPage({
         path: slug,
@@ -82,6 +78,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           categoryNormalized,
           slug,
         },
+      })
+
+      const legacyPaths = legacyPathsBySlug[post.fields.slug] || []
+      legacyPaths.forEach(fromPath => {
+        createRedirect({
+          fromPath,
+          toPath: slug,
+          isPermanent: true,
+          redirectInBrowser: true,
+          ignoreCase: false,
+        })
       })
     })
 
@@ -104,21 +111,55 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             post.frontmatter.category.includes(originalCategory)
         )
         .map(post => ({
-          slug: `/${normalizeCategory(post.frontmatter.category[0])}${
-            post.fields.slug
-          }`,
+          slug: createPostPath(post.frontmatter.category[0], post.fields.slug),
           title: post.frontmatter.title,
           date: post.frontmatter.date,
           description: post.frontmatter.description,
         }))
 
       createPage({
-        path: `/${normalizedCategory}/`, // Use the normalized category as the path
+        path: createCategoryPath(originalCategory),
         component: categoryTemplate,
         context: {
           category: originalCategory, // Pass the original category name to the template
           categoryNormalized: normalizedCategory,
           posts: categoryPosts, // Pass the filtered posts to the template
+        },
+      })
+    })
+
+    const postsBySourceSlug = new Map(
+      posts.map(post => [post.fields.slug, post])
+    )
+
+    topicHubs.forEach(hub => {
+      const hubPosts = hub.postSlugs.map(sourceSlug => {
+        const post = postsBySourceSlug.get(sourceSlug)
+
+        if (!post) {
+          reporter.panicOnBuild(
+            `Topic hub "${hub.title}" references a missing post: ${sourceSlug}`
+          )
+          return null
+        }
+
+        return {
+          slug: createPostPath(
+            post.frontmatter.category?.[0],
+            post.fields.slug
+          ),
+          title: post.frontmatter.title,
+          date: post.frontmatter.date,
+          description: post.frontmatter.description,
+        }
+      })
+
+      createPage({
+        path: hub.path,
+        component: topicHubTemplate,
+        context: {
+          hub,
+          posts: hubPosts.filter(Boolean),
         },
       })
     })
@@ -174,6 +215,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       category: [String]
       date: Date @dateformat
+      updated: Date @dateformat
+      tags: [String]
     }
 
     type Fields {

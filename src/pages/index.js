@@ -5,20 +5,26 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import PostCard from "../components/PostCard"
 import Seo from "../components/seo"
+import {
+  createPersonSchema,
+  createWebsiteSchema,
+} from "../utils/structured-data"
+import { createPostPath } from "../utils/urls"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteMetadata = data.site.siteMetadata
   const posts = data.allMarkdownRemark.nodes
 
   // Extract unique categories from posts
   const categories = Array.from(
-    new Set(posts.flatMap(post => post.frontmatter.category))
+    new Set(posts.flatMap(post => post.frontmatter.category || []))
   )
 
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="All posts" pathname="/" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -33,7 +39,16 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo
         title="Wale Ayandiran"
-        meta="Wale Ayandiran, Founder, tech founder, software engineer, Senior Frontend Engineer, AI Python, NodeJS, ReactJS, React, tech Lead, Engineering Leadership"
+        description="Wale Ayandiran writes about building companies, software engineering, artificial intelligence, leadership, and life."
+        pathname="/"
+        schema={[
+          createWebsiteSchema({
+            siteUrl: siteMetadata.siteUrl,
+            title: siteMetadata.title,
+            description: siteMetadata.description,
+          }),
+          createPersonSchema(siteMetadata.siteUrl),
+        ]}
       />
       <Bio categories={categories} />
 
@@ -42,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
           const category = post?.frontmatter?.category
 
-          const slug = `${category ? category[0] : "blog"}${post.fields.slug}`
+          const slug = createPostPath(category?.[0], post.fields.slug)
 
           return (
             <li key={post.fields.slug}>
@@ -68,6 +83,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
