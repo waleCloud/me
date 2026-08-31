@@ -47,6 +47,9 @@
     "prettier": "2.3.2"
   },
   "license": "0BSD",
+  "resolutions": {
+    "sharp": "0.32.6"
+  },
   "scripts": {
     "build": "gatsby build",
     "verify": "yarn format:check && yarn test && yarn build && yarn test:build",
