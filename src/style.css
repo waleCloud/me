@@ -394,7 +394,7 @@ a:focus {
 }
 
 .newsletter-form {
-  min-height: 6.5rem;
+  min-height: 3rem;
   min-width: 0;
   position: relative;
   width: 100%;
@@ -404,20 +404,23 @@ a:focus {
   margin-top: var(--spacing-5);
 }
 
-.newsletter-form iframe {
-  max-width: 100%;
+.newsletter-form-frame {
+  border: 0;
+  display: block;
+  height: 3rem;
   width: 100%;
 }
 
 .newsletter-form-loading {
-  align-items: center;
   color: var(--color-text-light);
-  display: flex;
   font-family: var(--font-heading);
   font-size: var(--fontSize-0);
-  inset: 0;
-  justify-content: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.newsletter-form:not(.newsletter-form-loaded) .newsletter-form-frame {
   position: absolute;
+  visibility: hidden;
 }
 
 .topic-list {

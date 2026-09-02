@@ -2,12 +2,11 @@ import * as React from "react"
 
 const BEEHIIV_ATTRIBUTION_SCRIPT =
   "https://subscribe-forms.beehiiv.com/attribution.js"
-const BEEHIIV_FORM_SCRIPT = "https://subscribe-forms.beehiiv.com/v3/loader.js"
 const BEEHIIV_FORM_ID = "a50b3125-1371-463d-891a-46523552421c"
+const BEEHIIV_FORM_URL = `https://subscribe-forms.beehiiv.com/v3/forms/${BEEHIIV_FORM_ID}?layout=slim`
 const ATTRIBUTION_SCRIPT_ID = "beehiiv-attribution"
 
 const NewsletterSignup = ({ compact = false }) => {
-  const formContainer = React.useRef(null)
   const [formLoaded, setFormLoaded] = React.useState(false)
 
   React.useEffect(() => {
@@ -17,32 +16,6 @@ const NewsletterSignup = ({ compact = false }) => {
       attributionScript.async = true
       attributionScript.src = BEEHIIV_ATTRIBUTION_SCRIPT
       document.body.appendChild(attributionScript)
-    }
-
-    const container = formContainer.current
-    if (!container) return undefined
-
-    const loaderScript = document.createElement("script")
-    loaderScript.async = true
-    loaderScript.src = BEEHIIV_FORM_SCRIPT
-    loaderScript.dataset.beehiivForm = BEEHIIV_FORM_ID
-
-    const observer = new MutationObserver(() => {
-      const hasRenderedForm = Array.from(container.children).some(
-        child =>
-          child !== loaderScript &&
-          !child.classList.contains("newsletter-form-loading")
-      )
-
-      if (hasRenderedForm) setFormLoaded(true)
-    })
-
-    observer.observe(container, { childList: true, subtree: true })
-    container.appendChild(loaderScript)
-
-    return () => {
-      observer.disconnect()
-      if (container.contains(loaderScript)) container.removeChild(loaderScript)
     }
   }, [])
 
@@ -66,19 +39,36 @@ const NewsletterSignup = ({ compact = false }) => {
         </p>
       </div>
       <div
-        className="newsletter-form"
+        className={`newsletter-form${
+          formLoaded ? ` newsletter-form-loaded` : ``
+        }`}
         data-newsletter-form={BEEHIIV_FORM_ID}
-        ref={formContainer}
       >
         {!formLoaded && (
-          <span className="newsletter-form-loading" aria-live="polite">
-            Loading subscription form…
-          </span>
+          <p className="newsletter-form-loading" aria-live="polite">
+            Loading subscription form… If it does not appear, {` `}
+            <a
+              href={BEEHIIV_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              open the signup form
+            </a>
+            .
+          </p>
         )}
+        <iframe
+          className="newsletter-form-frame"
+          src={BEEHIIV_FORM_URL}
+          title="Subscribe to the Walecloud newsletter"
+          loading="eager"
+          referrerPolicy="strict-origin-when-cross-origin"
+          onLoad={() => setFormLoaded(true)}
+        />
       </div>
     </aside>
   )
 }
 
-export { BEEHIIV_FORM_ID }
+export { BEEHIIV_FORM_ID, BEEHIIV_FORM_URL }
 export default NewsletterSignup
