@@ -27,6 +27,7 @@ const expectedPostPaths = [
   `/tech/access-previous-state/`,
   `/tech/artificial-what-ifs/`,
   `/tech/autonomous-worker-operators/`,
+  `/tech/be-less-impressed-by-what-you-build/`,
   `/tech/gcp-cloud-run-and-app-engine/`,
   `/tech/html5-semantics-building-the-right-way/`,
   `/tech/in-flight-token-refresh-deep-dive/`,

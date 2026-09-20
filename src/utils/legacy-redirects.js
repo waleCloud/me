@@ -13,6 +13,9 @@ const legacyPathsBySlug = {
     "/Tech/artificial-what-ifs/",
   ],
   "/autonomous-worker-operators/": ["/autonomous-worker-operators/"],
+  "/be-less-impressed-by-what-you-build/": [
+    "/be-less-impressed-by-what-you-build/",
+  ],
   "/big-data-analytics--better-decision-making/": [
     "/big-data-analytics--better-decision-making/",
     "/Academia-papers/big-data-analytics--better-decision-making/",
