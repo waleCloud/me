@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import NewsletterSignup from "../components/NewsletterSignup"
 import PostCard from "../components/PostCard"
 import Seo from "../components/seo"
 import {
@@ -52,7 +51,6 @@ const BlogIndex = ({ data, location }) => {
         ]}
       />
       <Bio categories={categories} />
-      <NewsletterSignup />
 
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {

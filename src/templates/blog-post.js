@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import NewsletterSignup from "../components/NewsletterSignup"
 import Seo from "../components/seo"
 import { createBlogPostingSchema } from "../utils/structured-data"
 import { createAbsoluteUrl, createPostPath } from "../utils/urls"
@@ -61,7 +60,6 @@ const BlogPostTemplate = ({ data, location }) => {
           {featuredImgFluid && <Img fluid={featuredImgFluid} />}
           <p>{post.frontmatter.displayDate}</p>
         </header>
-        <NewsletterSignup compact />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"

@@ -13,8 +13,6 @@ const articlePath = createPostPath(
 const articleUrl = `https://walecloud.me${articlePath}`
 const historicalArticleGuid = `https://walecloud.me/tweepy-fetch-historical-tweet-stream/`
 const linkedinUrl = `https://www.linkedin.com/in/wale-ayandiran-31717891`
-const beehiivFormId = `a50b3125-1371-463d-891a-46523552421c`
-const beehiivFormUrl = `https://subscribe-forms.beehiiv.com/v3/forms/${beehiivFormId}?layout=slim`
 const articleOutput = path.join(publicDirectory, articlePath, `index.html`)
 
 const readOutput = relativePath =>
@@ -39,14 +37,6 @@ assert(
 )
 assert(hasSchemaType(homepage, `WebSite`), `Homepage must describe the website`)
 assert(hasSchemaType(homepage, `Person`), `Homepage must identify the author`)
-assert(
-  homepage.includes(`data-newsletter-form="${beehiivFormId}"`),
-  `Homepage must feature the Beehiiv subscription form`
-)
-assert(
-  homepage.includes(beehiivFormUrl.replace(/&/g, `&amp;`)),
-  `Homepage must render the direct Beehiiv form iframe`
-)
 for (const expectedPath of [`/about/`, ...topicHubs.map(hub => hub.path)]) {
   assert(
     homepage.includes(expectedPath),
@@ -108,14 +98,6 @@ for (const itemUrl of itemLinks) {
   assert(
     !/cusdis/i.test(html),
     `Post must not load the retired comments: ${itemUrl}`
-  )
-  assert(
-    html.includes(`data-newsletter-form="${beehiivFormId}"`),
-    `Post is missing the Beehiiv subscription form: ${itemUrl}`
-  )
-  assert(
-    html.includes(beehiivFormUrl.replace(/&/g, `&amp;`)),
-    `Post is missing the direct Beehiiv form iframe: ${itemUrl}`
   )
   const articleSchemas = extractSchemas(html).filter(
     schema => schema[`@type`] === `BlogPosting`
