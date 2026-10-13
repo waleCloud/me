@@ -35,6 +35,18 @@ const legacyPathsBySlug = {
   "/in-flight-token-refresh-deep-dive/": [
     "/in-flight-token-refresh-deep-dive/",
   ],
+  "/experience-should-refine-you-not-rewrite-you/": [
+    "/experience-should-refine-you-not-rewrite-you/",
+    "/Life/experience-should-refine-you-not-rewrite-you/",
+  ],
+  "/ive-changed-my-mind-about-speed/": [
+    "/ive-changed-my-mind-about-speed/",
+    "/Tech/ive-changed-my-mind-about-speed/",
+  ],
+  "/the-cost-of-being-human/": [
+    "/the-cost-of-being-human/",
+    "/Life/the-cost-of-being-human/",
+  ],
   "/new-beginnings-MSc-Artificial-intelligence/": [
     "/new-beginnings-MSc-Artificial-intelligence/",
     "/Life/new-beginnings-MSc-Artificial-intelligence/",
