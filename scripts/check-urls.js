@@ -22,6 +22,8 @@ const expectedPostPaths = [
   `/life/2021wrapped/`,
   `/life/experience-should-refine-you-not-rewrite-you/`,
   `/life/new-beginnings-MSc-Artificial-intelligence/`,
+  `/life/on-taking-breaks/`,
+  `/life/sparks-and-sparkles/`,
   `/life/the-cost-of-being-human/`,
   `/machine-learning/tweepy-fetch-historical-tweet-stream/`,
   `/startup-stories/yutars-synopsis/`,

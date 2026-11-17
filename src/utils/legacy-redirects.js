@@ -51,6 +51,7 @@ const legacyPathsBySlug = {
     "/new-beginnings-MSc-Artificial-intelligence/",
     "/Life/new-beginnings-MSc-Artificial-intelligence/",
   ],
+  "/on-taking-breaks/": ["/on-taking-breaks/"],
   "/reboot-edinburgh-2025/": [
     "/reboot-edinburgh-2025/",
     "/Tech/reboot-edinburgh-2025/",
@@ -60,6 +61,7 @@ const legacyPathsBySlug = {
     "/Tech/scaling-frontend-apps-code-guidelines/",
   ],
   "/shared-api-platform-token-storms/": ["/shared-api-platform-token-storms/"],
+  "/sparks-and-sparkles/": ["/sparks-and-sparkles/"],
   "/the-engineering-meeting-paradox/": [
     "/the-engineering-meeting-paradox/",
     "/Tech/the-engineering-meeting-paradox/",
